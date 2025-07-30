@@ -146,7 +146,12 @@ def main():
         
         # 加载数据
         logger.info("加载数据...")
-        rag_system.load_data()
+        try:
+            rag_system.load_data()
+        except RuntimeError as e:
+            logger.error(f"数据加载失败: {e}")
+            logger.error("程序终止")
+            return
         
         if args.mode == 'index':
             # 仅建立索引

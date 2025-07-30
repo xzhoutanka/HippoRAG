@@ -43,12 +43,13 @@ class MUSENewsDataLoader:
         加载知识库数据（train分片）
         """
         if not HAS_DATASETS:
-            logger.warning("datasets包未安装，使用示例数据")
-            return self._get_sample_documents()
+            logger.error("❌ datasets包未安装！")
+            logger.error("请运行: pip install datasets>=2.0.0")
+            raise RuntimeError("缺少必要的datasets包")
         
         try:
-            logger.info("正在加载MUSE-News数据集的train分片...")
-            dataset = load_dataset(self.dataset_name, split="train")
+            logger.info("正在加载MUSE-News数据集的train配置...")
+            dataset = load_dataset(self.dataset_name, "train", trust_remote_code=True)
             
             documents = []
             for idx, item in enumerate(dataset):
@@ -101,9 +102,13 @@ class MUSENewsDataLoader:
             
         except Exception as e:
             logger.error(f"加载知识库失败: {e}")
-            # 如果加载失败，返回示例数据
-            logger.warning("使用示例数据替代...")
-            return self._get_sample_documents()
+            if "401" in str(e) or "Unauthorized" in str(e):
+                logger.error("❌ MUSE-News数据集需要Hugging Face认证！")
+                logger.error("解决方案:")
+                logger.error("1. 运行: python setup_huggingface_auth.py")
+                logger.error("2. 或设置: export HF_TOKEN='your-token'")
+                logger.error("3. 或运行: huggingface-cli login")
+            raise RuntimeError(f"无法加载MUSE-News数据集: {e}")
     
     def load_evaluation_data(self) -> Tuple[List[Question], List[Question]]:
         """
@@ -111,51 +116,71 @@ class MUSENewsDataLoader:
         返回: (knowmem分片的retain_qa数据, raw分片的retain2数据)
         """
         if not HAS_DATASETS:
-            logger.warning("datasets包未安装，使用示例评测数据")
-            return self._get_sample_questions()
+            logger.error("❌ datasets包未安装！")
+            logger.error("请运行: pip install datasets>=2.0.0")
+            raise RuntimeError("缺少必要的datasets包")
         
         try:
-            # 加载knowmem分片的数据
-            logger.info("正在加载knowmem分片数据...")
+            # 加载knowmem配置的数据
+            logger.info("正在加载knowmem配置数据...")
             knowmem_questions = []
             try:
-                knowmem_dataset = load_dataset(self.dataset_name, split="knowmem")
+                knowmem_dataset = load_dataset(self.dataset_name, "knowmem", trust_remote_code=True)
                 for idx, item in enumerate(knowmem_dataset):
                     if self._is_retain_qa(item):
                         question = self._parse_question(item, f"knowmem_{idx}")
                         if question:
                             knowmem_questions.append(question)
             except Exception as e:
-                logger.warning(f"加载knowmem数据失败: {e}")
+                logger.error(f"加载knowmem数据失败: {e}")
+                if "401" in str(e) or "Unauthorized" in str(e):
+                    logger.error("❌ MUSE-News数据集需要Hugging Face认证！")
+                    raise RuntimeError(f"无法加载knowmem数据: {e}")
             
-            # 加载raw分片的数据
-            logger.info("正在加载raw分片数据...")
+            # 加载raw配置的数据
+            logger.info("正在加载raw配置数据...")
             raw_questions = []
             try:
-                raw_dataset = load_dataset(self.dataset_name, split="raw")
+                raw_dataset = load_dataset(self.dataset_name, "raw", trust_remote_code=True)
                 for idx, item in enumerate(raw_dataset):
                     if self._is_retain2(item):
                         question = self._parse_question(item, f"raw_{idx}")
                         if question:
                             raw_questions.append(question)
             except Exception as e:
-                logger.warning(f"加载raw数据失败: {e}")
+                logger.error(f"加载raw数据失败: {e}")
+                if "401" in str(e) or "Unauthorized" in str(e):
+                    logger.error("❌ MUSE-News数据集需要Hugging Face认证！")
+                    raise RuntimeError(f"无法加载raw数据: {e}")
             
             logger.info(f"成功加载评测数据: knowmem={len(knowmem_questions)}, raw={len(raw_questions)}")
             
-            # 如果没有加载到数据，使用示例数据
+            # 检查是否成功加载数据
             if not knowmem_questions and not raw_questions:
-                logger.warning("使用示例评测数据...")
-                return self._get_sample_questions()
+                logger.error("❌ 未能加载任何评测数据！")
+                logger.error("请检查MUSE-News数据集访问权限")
+                raise RuntimeError("无法加载评测数据，请检查数据集访问权限")
             
             return knowmem_questions, raw_questions
             
         except Exception as e:
             logger.error(f"加载评测数据失败: {e}")
-            return self._get_sample_questions()
+            if "401" in str(e) or "Unauthorized" in str(e):
+                logger.error("❌ MUSE-News数据集需要Hugging Face认证！")
+                logger.error("解决方案:")
+                logger.error("1. 运行: python setup_huggingface_auth.py")
+                logger.error("2. 或设置: export HF_TOKEN='your-token'")
+                logger.error("3. 或运行: huggingface-cli login")
+            raise RuntimeError(f"无法加载评测数据: {e}")
     
-    def _is_retain_qa(self, item: Dict[str, Any]) -> bool:
+    def _is_retain_qa(self, item: Any) -> bool:
         """判断是否为retain_qa类型的数据"""
+        if isinstance(item, str):
+            return 'retain_qa' in item.lower() or 'question' in item.lower()
+        
+        if not isinstance(item, dict):
+            return False
+            
         return (
             item.get('type') == 'retain_qa' or 
             item.get('task_type') == 'retain_qa' or
@@ -163,8 +188,14 @@ class MUSENewsDataLoader:
             'question' in item
         )
     
-    def _is_retain2(self, item: Dict[str, Any]) -> bool:
+    def _is_retain2(self, item: Any) -> bool:
         """判断是否为retain2类型的数据"""
+        if isinstance(item, str):
+            return 'retain2' in item.lower() or 'retain' in item.lower()
+        
+        if not isinstance(item, dict):
+            return False
+            
         return (
             item.get('type') == 'retain2' or 
             item.get('task_type') == 'retain2' or
@@ -172,9 +203,35 @@ class MUSENewsDataLoader:
             ('question' in item and 'retain' in str(item.get('id', '')))
         )
     
-    def _parse_question(self, item: Dict[str, Any], default_id: str) -> Question:
+    def _parse_question(self, item: Any, default_id: str) -> Question:
         """解析问题数据"""
         try:
+            # 处理不同类型的item
+            if isinstance(item, str):
+                # 如果item是字符串，尝试解析为JSON
+                try:
+                    import json
+                    item = json.loads(item)
+                except:
+                    # 如果不是JSON，创建简单的问题对象
+                    return Question(
+                        id=default_id,
+                        question=item,
+                        answer=[],
+                        answerable=True,
+                        paragraphs=[]
+                    )
+            
+            if not isinstance(item, dict):
+                # 如果不是字典，转换为字符串问题
+                return Question(
+                    id=default_id,
+                    question=str(item),
+                    answer=[],
+                    answerable=True,
+                    paragraphs=[]
+                )
+            
             question_text = item.get('question', item.get('query', ''))
             if not question_text:
                 return None
@@ -200,7 +257,7 @@ class MUSENewsDataLoader:
                 paragraphs=paragraphs
             )
         except Exception as e:
-            logger.warning(f"解析问题失败: {e}")
+            logger.warning(f"解析问题失败: {e}, item类型: {type(item)}")
             return None
     
     def _get_sample_documents(self) -> List[Document]:
