@@ -49,53 +49,46 @@ class MUSENewsDataLoader:
         
         try:
             logger.info("正在加载MUSE-News数据集的train配置...")
-            dataset = load_dataset(self.dataset_name, "train", trust_remote_code=True)
+            # 加载train配置的所有splits
+            train_dataset = load_dataset(self.dataset_name, "train", trust_remote_code=True)
             
             documents = []
-            for idx, item in enumerate(dataset):
-                # 根据MUSE-News的实际数据格式调整
-                if 'text' in item and 'title' in item:
-                    doc = Document(
-                        title=item.get('title', f'Document {idx}'),
-                        text=item['text'],
-                        idx=idx
-                    )
-                    documents.append(doc)
-                elif 'content' in item:  # 如果字段名不同
-                    doc = Document(
-                        title=item.get('title', item.get('headline', f'Document {idx}')),
-                        text=item['content'],
-                        idx=idx
-                    )
-                    documents.append(doc)
-                elif isinstance(item, str):  # 如果直接是文本
-                    doc = Document(
-                        title=f'Document {idx}',
-                        text=item,
-                        idx=idx
-                    )
-                    documents.append(doc)
-                else:
-                    # 尝试其他可能的字段名
-                    text_fields = ['article', 'body', 'document', 'passage']
-                    title_fields = ['headline', 'subject', 'topic']
+            doc_idx = 0
+            
+            # 从所有splits加载知识库数据（forget, retain1, retain2）
+            for split_name in ['forget', 'retain1', 'retain2']:
+                if split_name in train_dataset:
+                    logger.info(f"  正在处理{split_name} split...")
+                    split_data = train_dataset[split_name]
                     
-                    text = None
-                    title = f'Document {idx}'
-                    
-                    for field in text_fields:
-                        if field in item and item[field]:
-                            text = item[field]
-                            break
-                    
-                    for field in title_fields:
-                        if field in item and item[field]:
-                            title = item[field]
-                            break
-                    
-                    if text:
-                        doc = Document(title=title, text=text, idx=idx)
-                        documents.append(doc)
+                    for item in split_data:
+                        # 处理文档数据
+                        if isinstance(item, dict):
+                            # 寻找文本字段
+                            text = None
+                            for text_field in ['text', 'content', 'body', 'article', 'passage']:
+                                if text_field in item and item[text_field]:
+                                    text = item[text_field]
+                                    if isinstance(text, list):
+                                        text = ' '.join(str(t) for t in text)
+                                    break
+                            
+                            if text:
+                                # 寻找标题字段  
+                                title = f'Document {doc_idx}'
+                                for title_field in ['title', 'headline', 'summary', 'subject']:
+                                    if title_field in item and item[title_field]:
+                                        title = str(item[title_field])
+                                        break
+                                
+                                doc = Document(title=title, text=str(text), idx=doc_idx)
+                                documents.append(doc)
+                                doc_idx += 1
+                        elif isinstance(item, str):
+                            # 如果直接是字符串
+                            doc = Document(title=f'Document {doc_idx}', text=item, idx=doc_idx)
+                            documents.append(doc)
+                            doc_idx += 1
             
             logger.info(f"成功加载 {len(documents)} 个文档")
             return documents
@@ -121,14 +114,18 @@ class MUSENewsDataLoader:
             raise RuntimeError("缺少必要的datasets包")
         
         try:
-            # 加载knowmem配置的数据
+            # 加载knowmem配置的retain_qa数据
             logger.info("正在加载knowmem配置数据...")
             knowmem_questions = []
             try:
                 knowmem_dataset = load_dataset(self.dataset_name, "knowmem", trust_remote_code=True)
-                for idx, item in enumerate(knowmem_dataset):
-                    if self._is_retain_qa(item):
-                        question = self._parse_question(item, f"knowmem_{idx}")
+                # 只使用retain_qa split
+                if 'retain_qa' in knowmem_dataset:
+                    logger.info("  正在处理retain_qa split...")
+                    retain_qa_data = knowmem_dataset['retain_qa']
+                    
+                    for idx, item in enumerate(retain_qa_data):
+                        question = self._parse_question(item, f"knowmem_retain_qa_{idx}")
                         if question:
                             knowmem_questions.append(question)
             except Exception as e:
@@ -137,16 +134,52 @@ class MUSENewsDataLoader:
                     logger.error("❌ MUSE-News数据集需要Hugging Face认证！")
                     raise RuntimeError(f"无法加载knowmem数据: {e}")
             
-            # 加载raw配置的数据
+            # 加载raw配置的retain2数据并创建问答对
             logger.info("正在加载raw配置数据...")
             raw_questions = []
             try:
                 raw_dataset = load_dataset(self.dataset_name, "raw", trust_remote_code=True)
-                for idx, item in enumerate(raw_dataset):
-                    if self._is_retain2(item):
-                        question = self._parse_question(item, f"raw_{idx}")
-                        if question:
+                # 只使用retain2 split，从文本创建问答对
+                if 'retain2' in raw_dataset:
+                    logger.info("  正在处理retain2 split（创建问答对）...")
+                    retain2_data = raw_dataset['retain2']
+                    
+                    # 只处理前100个文档创建问答对
+                    for i, item in enumerate(retain2_data):
+                        if i >= 100:  # 只处理前100条
+                            break
+                            
+                        if isinstance(item, dict):
+                            text_content = item.get('text', '')
+                            if text_content:
+                                # 为每个文档创建一个简单的问答对
+                                question_text = f'What is discussed in document {i+1}?'
+                                answer_text = text_content[:200] + '...' if len(text_content) > 200 else text_content
+                                
+                                question = Question(
+                                    id=f"raw_retain2_{i}",
+                                    question=question_text,
+                                    answer=[answer_text],
+                                    answerable=True,
+                                    paragraphs=[text_content]  # 完整文本作为上下文
+                                )
+                                raw_questions.append(question)
+                        elif isinstance(item, str):
+                            # 如果直接是字符串
+                            text_content = item
+                            question_text = f'What is discussed in document {i+1}?'
+                            answer_text = text_content[:200] + '...' if len(text_content) > 200 else text_content
+                            
+                            question = Question(
+                                id=f"raw_retain2_{i}",
+                                question=question_text,
+                                answer=[answer_text],
+                                answerable=True,
+                                paragraphs=[text_content]
+                            )
                             raw_questions.append(question)
+                    
+                    logger.info(f"  成功从retain2创建了{len(raw_questions)}个问答对")
             except Exception as e:
                 logger.error(f"加载raw数据失败: {e}")
                 if "401" in str(e) or "Unauthorized" in str(e):
