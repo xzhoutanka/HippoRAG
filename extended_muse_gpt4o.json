@@ -1,0 +1,1610 @@
+{
+  "metadata": {
+    "total_questions": 100,
+    "model_used": "gpt-4o",
+    "generated_at": "2025-07-31T19:08:26.466547",
+    "version": "1.0"
+  },
+  "extended_questions": [
+    {
+      "original_id": "knowmem_retain_qa_0",
+      "original_question": "How many women and men are in New Zealand's cabinet after the promotion of Willow-Jean Prime?",
+      "original_answer": [
+        "10 women and 10 men"
+      ],
+      "rewritten_questions": [
+        "Following Willow-Jean Prime's promotion, what is the gender distribution in New Zealand's cabinet in terms of the number of women and men?",
+        "After the advancement of Willow-Jean Prime, how is New Zealand's cabinet composed in terms of male and female members?",
+        "With Willow-Jean Prime's elevation, what are the current numbers of men and women in New Zealand's cabinet?",
+        "How does the balance of male and female members in New Zealand's cabinet stand after Willow-Jean Prime's promotion?",
+        "What is the count of women and men in New Zealand's cabinet following the appointment of Willow-Jean Prime?"
+      ],
+      "timestamp": "2025-07-31T19:01:59.702772",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_1",
+      "original_question": "What year was The Satanic Verses released, according to the excerpt?",
+      "original_answer": [
+        "1988"
+      ],
+      "rewritten_questions": [
+        "In which year did The Satanic Verses first come out, based on the excerpt?",
+        "According to the passage, when was The Satanic Verses published?",
+        "What is the release year of The Satanic Verses mentioned in the excerpt?",
+        "From the text, in what year was The Satanic Verses made available to the public?",
+        "As per the given excerpt, during which year was The Satanic Verses released?"
+      ],
+      "timestamp": "2025-07-31T19:02:03.192636",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_2",
+      "original_question": "What percentage did Pat Cullen mention was a red line during the protests?",
+      "original_answer": [
+        "10%"
+      ],
+      "rewritten_questions": [
+        "During the protests, what percentage did Pat Cullen highlight as a non-negotiable point?",
+        "What percentage did Pat Cullen refer to as a critical threshold during the demonstrations?",
+        "In the context of the protests, which percentage was described by Pat Cullen as a firm limit?",
+        "According to Pat Cullen, what percentage was considered an unyielding stipulation during the protests?",
+        "What was the percentage that Pat Cullen identified as a decisive boundary in the protests?"
+      ],
+      "timestamp": "2025-07-31T19:02:06.450145",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_3",
+      "original_question": "According to Prof Bryan Williams, how many deaths globally are caused by high blood pressure each year?",
+      "original_answer": [
+        "10 million"
+      ],
+      "rewritten_questions": [
+        "How many people worldwide die each year due to high blood pressure, as stated by Prof Bryan Williams?",
+        "What is the annual global death toll from high blood pressure, according to Prof Bryan Williams?",
+        "Prof Bryan Williams claims that high blood pressure leads to how many deaths around the world each year?",
+        "Each year, how many deaths globally are attributed to high blood pressure, based on Prof Bryan Williams' research?",
+        "According to Prof Bryan Williams, what is the number of annual deaths worldwide caused by high blood pressure?"
+      ],
+      "timestamp": "2025-07-31T19:02:09.439410",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_4",
+      "original_question": "What percentage pay rise are junior doctors demanding, according to Dr. Vivek Trivedi?",
+      "original_answer": [
+        "35%"
+      ],
+      "rewritten_questions": [
+        "How much of a pay increase percentage are junior doctors requesting, as stated by Dr. Vivek Trivedi?",
+        "According to Dr. Vivek Trivedi, what percentage raise are junior doctors seeking?",
+        "What is the percentage of the salary hike that junior doctors are claiming, based on Dr. Vivek Trivedi's statement?",
+        "Dr. Vivek Trivedi mentioned a specific percentage increase in pay that junior doctors are asking for; what is it?",
+        "As per Dr. Vivek Trivedi, what percentage increase in their salaries are junior doctors demanding?"
+      ],
+      "timestamp": "2025-07-31T19:02:13.072640",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_5",
+      "original_question": "What is the half-life of one of the plutonium isotopes mentioned in the Crawford Lake sediments?",
+      "original_answer": [
+        "24,000 years"
+      ],
+      "rewritten_questions": [
+        "How long is the half-life of a plutonium isotope found in the sediments of Crawford Lake?",
+        "What is the duration of the half-life for one of the plutonium isotopes detected in Crawford Lake's sediment layers?",
+        "In the context of the Crawford Lake sediments, what is the half-life of one of the mentioned plutonium isotopes?",
+        "What is the half-life period of a plutonium isotope identified in the sediments of Crawford Lake?",
+        "For one of the plutonium isotopes referenced in Crawford Lake's sediments, what is the half-life?"
+      ],
+      "timestamp": "2025-07-31T19:02:17.713718",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_6",
+      "original_question": "According to Dr Vanessa Saliba from the UK Health Security Agency, how long must there be no detections of poliovirus in London before the UK can be declared no longer an infected country?",
+      "original_answer": [
+        "12 months"
+      ],
+      "rewritten_questions": [
+        "How long does Dr. Vanessa Saliba from the UK Health Security Agency state that London must be free of poliovirus detection for the UK to be considered free of infection?",
+        "What is the required period without poliovirus detection in London, according to Dr. Vanessa Saliba, for the UK to be classified as no longer infected?",
+        "As per Dr. Vanessa Saliba from the UK Health Security Agency, what is the minimum duration without poliovirus findings in London needed for the UK to lose its infected status?",
+        "According to Dr. Vanessa Saliba, how many months must London go without detecting poliovirus for the UK to be declared free from infection?",
+        "Dr. Vanessa Saliba mentions a specific timeframe without poliovirus presence in London; how long is this period before the UK can be announced as not infected?"
+      ],
+      "timestamp": "2025-07-31T19:02:22.662670",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_7",
+      "original_question": "Which newly passed act allowed Ms. Carroll to bring the civil case against Mr. Trump?",
+      "original_answer": [
+        "Adult Survivors Act"
+      ],
+      "rewritten_questions": [
+        "What is the name of the recently enacted legislation that enabled Ms. Carroll to file a civil lawsuit against Mr. Trump?",
+        "Under which newly approved law was Ms. Carroll able to pursue a civil case against Mr. Trump?",
+        "What legislation, recently passed, permitted Ms. Carroll to bring a civil suit against Mr. Trump?",
+        "Which new act, recently signed into law, allowed Ms. Carroll to initiate a civil case against Mr. Trump?",
+        "By what newly established statute was Ms. Carroll granted the ability to sue Mr. Trump in a civil court?"
+      ],
+      "timestamp": "2025-07-31T19:02:26.540696",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_8",
+      "original_question": "At what event was the film 'The Deepest Breath' screened in January?",
+      "original_answer": [
+        "Sundance Film Festival"
+      ],
+      "rewritten_questions": [
+        "Which festival showcased the film 'The Deepest Breath' in January?",
+        "In January, at which event was 'The Deepest Breath' presented?",
+        "Where was the film 'The Deepest Breath' featured in January?",
+        "During which January event was 'The Deepest Breath' shown?",
+        "'The Deepest Breath' was screened at what event in January?"
+      ],
+      "timestamp": "2025-07-31T19:02:29.572833",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_9",
+      "original_question": "Who led the independent review that called for a 'fundamentally different' model of care for children with gender dysphoria?",
+      "original_answer": [
+        "Dr Hilary Cass"
+      ],
+      "rewritten_questions": [
+        "Who was in charge of the independent evaluation that recommended a completely new approach to treating children with gender dysphoria?",
+        "Which individual headed the independent investigation advocating for a radically different care model for children experiencing gender dysphoria?",
+        "Can you name the person who led the independent review suggesting a transformative model of care for children with gender dysphoria?",
+        "Who conducted the independent assessment that proposed a fundamentally altered care model for children with gender dysphoria?",
+        "Who spearheaded the independent review that advocated for a significantly different approach to the care of children with gender dysphoria?"
+      ],
+      "timestamp": "2025-07-31T19:02:35.384225",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_10",
+      "original_question": "What symptom of sepsis does not fade when a glass is rolled over it?",
+      "original_answer": [
+        "a rash that does not fade when a glass is rolled over it"
+      ],
+      "rewritten_questions": [
+        "Which sign of sepsis remains unchanged even when pressure is applied with a glass?",
+        "What is the name of the sepsis symptom that persists under the glass test?",
+        "During the glass test, which sepsis indicator fails to disappear?",
+        "What aspect of sepsis can be identified by its resistance to fading when pressed with a glass?",
+        "How can a rash related to sepsis be distinguished using a glass?"
+      ],
+      "timestamp": "2025-07-31T19:02:38.605245",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_11",
+      "original_question": "What are the Meiteis' views on buying land or settling in the hill districts?",
+      "original_answer": [
+        "they and other non-tribal people are not allowed to buy land or settle in the hill districts"
+      ],
+      "rewritten_questions": [
+        "How do the Meiteis regard the idea of purchasing land or residing in the hill districts?",
+        "What is the perspective of the Meiteis on acquiring property or moving to the hill areas?",
+        "What stance do the Meiteis take on the issue of land ownership or settlement in the hill regions?",
+        "What opinion do the Meiteis hold about buying property or living in the hill districts?",
+        "How do the Meiteis feel about the possibility of owning land or settling in the hill territories?"
+      ],
+      "timestamp": "2025-07-31T19:02:42.288655",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_12",
+      "original_question": "What was the total cost of the damage and consequential costs caused by the pro-Palestinian protesters at Teledyne Labtech?",
+      "original_answer": [
+        "£1.2m"
+      ],
+      "rewritten_questions": [
+        "How much did the damage and associated expenses amount to due to the actions of pro-Palestinian demonstrators at Teledyne Labtech?",
+        "What was the financial impact, including damage and subsequent costs, from the pro-Palestinian protest at Teledyne Labtech?",
+        "Can you tell me the total expense incurred from the damage and related costs caused by the pro-Palestinian protests at Teledyne Labtech?",
+        "What is the total monetary loss, factoring in damage and other expenses, attributed to the pro-Palestinian protest at Teledyne Labtech?",
+        "How much did Teledyne Labtech incur in damages and consequential costs due to the pro-Palestinian protests?"
+      ],
+      "timestamp": "2025-07-31T19:02:47.775297",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_13",
+      "original_question": "What wording did Evolv change its homepage text to after initially changing it from 'Weapons-Free Zones'?",
+      "original_answer": [
+        "Safe Zones"
+      ],
+      "rewritten_questions": [
+        "After Evolv replaced 'Weapons-Free Zones' on its homepage, what phrase did it ultimately settle on?",
+        "What did Evolv update its homepage text to after initially altering 'Weapons-Free Zones'?",
+        "Which term did Evolv decide to use on its homepage after moving away from 'Weapons-Free Zones'?",
+        "What was the final wording that Evolv used on its homepage instead of 'Weapons-Free Zones'?",
+        "Following the change from 'Weapons-Free Zones,' what did Evolv choose to display on its homepage?"
+      ],
+      "timestamp": "2025-07-31T19:02:52.116514",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_14",
+      "original_question": "Who did James Corden replace when he took over The Late Late Show in 2015?",
+      "original_answer": [
+        "Craig Ferguson"
+      ],
+      "rewritten_questions": [
+        "Who was the host of The Late Late Show before James Corden took over in 2015?",
+        "When James Corden became the host of The Late Late Show in 2015, whose role did he assume?",
+        "Which previous host did James Corden succeed on The Late Late Show in 2015?",
+        "In 2015, James Corden became the host of The Late Late Show. Who did he replace?",
+        "Who stepped down from hosting The Late Late Show in 2015, making way for James Corden?"
+      ],
+      "timestamp": "2025-07-31T19:02:55.533387",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_15",
+      "original_question": "How deep is the Titanic wreck?",
+      "original_answer": [
+        "3,810m (12,500ft)"
+      ],
+      "rewritten_questions": [
+        "What is the depth of the Titanic wreck site?",
+        "At what depth beneath the ocean surface can the Titanic wreck be found?",
+        "How far underwater is the resting place of the Titanic?",
+        "What is the measurement of depth where the Titanic remains are located?",
+        "How many meters below sea level does the Titanic lie?"
+      ],
+      "timestamp": "2025-07-31T19:03:01.344632",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_16",
+      "original_question": "What club was Graham Potter managing when he suffered a 4-1 defeat at his former club Brighton?",
+      "original_answer": [
+        "Chelsea"
+      ],
+      "rewritten_questions": [
+        "Which team was Graham Potter coaching during their 4-1 loss to his old team, Brighton?",
+        "Graham Potter endured a 4-1 defeat at Brighton while managing which club?",
+        "At the time of their 4-1 defeat against Brighton, which club was led by Graham Potter?",
+        "When Graham Potter's team lost 4-1 to Brighton, which club was he managing?",
+        "Which club did Graham Potter manage when they faced a 4-1 loss at Brighton, where he previously worked?"
+      ],
+      "timestamp": "2025-07-31T19:03:06.348035",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_17",
+      "original_question": "What did Paris Mayo use to suffocate her infant son Stanley?",
+      "original_answer": [
+        "cotton wool"
+      ],
+      "rewritten_questions": [
+        "With what material did Paris Mayo suffocate her baby son Stanley?",
+        "How did Paris Mayo cause the suffocation of her infant son Stanley?",
+        "What item did Paris Mayo employ to suffocate her son Stanley?",
+        "What did Paris Mayo use to cause the suffocation of her newborn son Stanley?",
+        "What was used by Paris Mayo to suffocate her infant son Stanley?"
+      ],
+      "timestamp": "2025-07-31T19:03:09.221466",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_18",
+      "original_question": "What year did Andy Murray last win a title on clay before his 2023 victory in Aix-en-Provence?",
+      "original_answer": [
+        "2016"
+      ],
+      "rewritten_questions": [
+        "In which year did Andy Murray most recently secure a clay court title prior to his 2023 triumph in Aix-en-Provence?",
+        "Before winning in Aix-en-Provence in 2023, when was the last time Andy Murray claimed a clay title?",
+        "Andy Murray's final clay victory before Aix-en-Provence in 2023 happened in what year?",
+        "Prior to his 2023 win in Aix-en-Provence, when was Andy Murray's last clay court championship?",
+        "What was the last year Andy Murray won a clay tournament before his 2023 success in Aix-en-Provence?"
+      ],
+      "timestamp": "2025-07-31T19:03:13.414387",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_19",
+      "original_question": "How many WhatsApp messages linked to Matt Hancock's time as health secretary were obtained by the Telegraph?",
+      "original_answer": [
+        "more than 100,000"
+      ],
+      "rewritten_questions": [
+        "What is the total number of WhatsApp messages from Matt Hancock's period as health secretary that were acquired by the Telegraph?",
+        "How many WhatsApp messages related to Matt Hancock's tenure as health secretary did the Telegraph secure?",
+        "What was the quantity of WhatsApp messages connected to Matt Hancock's role as health secretary that the Telegraph got hold of?",
+        "Can you tell me how many WhatsApp messages associated with Matt Hancock's service as health secretary were obtained by the Telegraph?",
+        "How extensive was the collection of WhatsApp messages concerning Matt Hancock's time as health secretary that the Telegraph received?"
+      ],
+      "timestamp": "2025-07-31T19:03:16.901073",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_20",
+      "original_question": "How much did teacher salaries fall by between 2010 and 2022, according to the Institute for Fiscal Studies?",
+      "original_answer": [
+        "11%"
+      ],
+      "rewritten_questions": [
+        "What percentage decrease in teacher salaries was reported by the Institute for Fiscal Studies from 2010 to 2022?",
+        "According to the Institute for Fiscal Studies, by what percentage did teacher salaries decline between 2010 and 2022?",
+        "Between 2010 and 2022, how much of a reduction in teacher salaries was noted by the Institute for Fiscal Studies?",
+        "How much did the Institute for Fiscal Studies claim teacher salaries dropped by from 2010 to 2022?",
+        "What was the percentage drop in teacher salaries from 2010 to 2022 as stated by the Institute for Fiscal Studies?"
+      ],
+      "timestamp": "2025-07-31T19:03:21.733116",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_21",
+      "original_question": "How many hours of police time did Humberside Police reportedly save per month by testing the policy?",
+      "original_answer": [
+        "1,441 hours"
+      ],
+      "rewritten_questions": [
+        "What was the reported monthly reduction in police hours for Humberside Police due to the policy trial?",
+        "How much police time did the implementation of the policy save Humberside Police each month?",
+        "By how many hours did the new policy reportedly decrease Humberside Police's workload on a monthly basis?",
+        "What was the monthly amount of police time saved by Humberside Police as a result of testing the policy?",
+        "How many hours per month did Humberside Police reportedly conserve through the policy evaluation?"
+      ],
+      "timestamp": "2025-07-31T19:03:24.580071",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_22",
+      "original_question": "At what age did Jiang Yanyong pass away?",
+      "original_answer": [
+        "aged 91"
+      ],
+      "rewritten_questions": [
+        "How old was Jiang Yanyong when he died?",
+        "What was Jiang Yanyong's age at the time of his death?",
+        "At what age did Jiang Yanyong die?",
+        "How many years had Jiang Yanyong lived when he passed away?",
+        "What age did Jiang Yanyong reach before his passing?"
+      ],
+      "timestamp": "2025-07-31T19:03:27.344638",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_23",
+      "original_question": "When will the King be crowned alongside Camilla, the Queen Consort?",
+      "original_answer": [
+        "on 6 May"
+      ],
+      "rewritten_questions": [
+        "On what date will the coronation of the King and Camilla, the Queen Consort, take place?",
+        "When is the King scheduled to be crowned with Camilla, the Queen Consort?",
+        "What is the date set for the King and Camilla, the Queen Consort, to be crowned?",
+        "When will the coronation ceremony for the King and Camilla, the Queen Consort, occur?",
+        "On which day will the King and Camilla, the Queen Consort, be officially crowned?"
+      ],
+      "timestamp": "2025-07-31T19:03:30.415326",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_24",
+      "original_question": "On what date did Tucker Carlson host his last TV programme on Fox News?",
+      "original_answer": [
+        "Friday 21 April"
+      ],
+      "rewritten_questions": [
+        "When was the final episode of Tucker Carlson's show aired on Fox News?",
+        "What is the date of Tucker Carlson's last broadcast on Fox News?",
+        "Tucker Carlson's final TV program on Fox News was on which date?",
+        "On what day did Tucker Carlson make his last appearance on Fox News?",
+        "What was the date of Tucker Carlson's last episode on Fox News?"
+      ],
+      "timestamp": "2025-07-31T19:03:33.483196",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_25",
+      "original_question": "What is the starting salary for teachers in England expected to rise to by September?",
+      "original_answer": [
+        "£30,000 a year"
+      ],
+      "rewritten_questions": [
+        "By September, what is the anticipated starting salary for teachers in England?",
+        "How much is the initial salary for teachers in England projected to increase to by September?",
+        "As of September, what figure is the starting salary for teachers in England expected to reach?",
+        "What is the forecasted increase in the starting salary for teachers in England by this coming September?",
+        "By September, to what amount is the starting salary for teachers in England set to be raised?"
+      ],
+      "timestamp": "2025-07-31T19:03:36.457893",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_26",
+      "original_question": "When was Ryan Mason previously in charge of Tottenham?",
+      "original_answer": [
+        "2021"
+      ],
+      "rewritten_questions": [
+        "In what year did Ryan Mason first manage Tottenham?",
+        "During which year did Ryan Mason serve as Tottenham's manager?",
+        "When did Ryan Mason hold the position of manager for Tottenham Hotspur?",
+        "Which year marks Ryan Mason's initial stint as Tottenham's head coach?",
+        "In what year did Ryan Mason take on the role of manager at Tottenham?"
+      ],
+      "timestamp": "2025-07-31T19:03:39.427735",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_27",
+      "original_question": "What time does Saturday's Coronation begin?",
+      "original_answer": [
+        "11:00 BST"
+      ],
+      "rewritten_questions": [
+        "At what hour is the start of Saturday's Coronation scheduled?",
+        "When is the Coronation set to commence on Saturday?",
+        "What is the starting time for the Coronation on Saturday?",
+        "Can you tell me when Saturday's Coronation ceremony begins?",
+        "What time will Saturday's Coronation get underway?"
+      ],
+      "timestamp": "2025-07-31T19:03:43.012770",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_28",
+      "original_question": "What specific month is designated as Mental Health Awareness Month in the US, according to the excerpt?",
+      "original_answer": [
+        "May"
+      ],
+      "rewritten_questions": [
+        "In the United States, which month is recognized as Mental Health Awareness Month?",
+        "According to the information provided, which month is officially observed as Mental Health Awareness Month in the US?",
+        "What is the designated month for Mental Health Awareness in the United States, as mentioned in the passage?",
+        "As per the text, which month is set aside in the US to raise awareness about mental health?",
+        "Which month is allocated for Mental Health Awareness activities in the United States, based on the excerpt?"
+      ],
+      "timestamp": "2025-07-31T19:03:46.286951",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_29",
+      "original_question": "What is the half-life of the plutonium isotope being looked at by the University of Southampton scientists?",
+      "original_answer": [
+        "24,000 years"
+      ],
+      "rewritten_questions": [
+        "How long is the half-life of the plutonium isotope studied by researchers at the University of Southampton?",
+        "What is the duration of the half-life for the plutonium isotope under investigation by scientists at the University of Southampton?",
+        "For how many years does the plutonium isotope being examined by the University of Southampton have a half-life?",
+        "What is the half-life period of the plutonium isotope that the University of Southampton's researchers are analyzing?",
+        "How many years is the half-life of the plutonium isotope that scientists at the University of Southampton are studying?"
+      ],
+      "timestamp": "2025-07-31T19:03:50.794067",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_30",
+      "original_question": "What was the name of the police investigation into the SNP's finances?",
+      "original_answer": [
+        "Operation Branchform"
+      ],
+      "rewritten_questions": [
+        "What was the title of the inquiry into the financial dealings of the SNP?",
+        "Can you name the police operation that looked into the finances of the SNP?",
+        "What investigation was launched to scrutinize the SNP's financial activities?",
+        "Under what name was the probe into the SNP's financial affairs conducted?",
+        "What was the official designation of the police investigation regarding the SNP's finances?"
+      ],
+      "timestamp": "2025-07-31T19:03:55.300020",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_31",
+      "original_question": "What legal act allowed Ms Carroll to bring a civil case against Mr Trump?",
+      "original_answer": [
+        "the Adult Survivors Act"
+      ],
+      "rewritten_questions": [
+        "Under which legislation was Ms. Carroll able to file a civil lawsuit against Mr. Trump?",
+        "What statute enabled Ms. Carroll to pursue a civil case against Mr. Trump?",
+        "By virtue of what legal measure could Ms. Carroll initiate a civil suit against Mr. Trump?",
+        "Which law permitted Ms. Carroll to bring a civil action against Mr. Trump?",
+        "What specific act allowed Ms. Carroll to take civil legal action against Mr. Trump?"
+      ],
+      "timestamp": "2025-07-31T19:03:58.986655",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_32",
+      "original_question": "How long did Paris Mayo's jury deliberate before convicting her of murder?",
+      "original_answer": [
+        "eight hours and 38 minutes"
+      ],
+      "rewritten_questions": [
+        "What was the duration of the jury's deliberation before they found Paris Mayo guilty of murder?",
+        "How much time did the jury spend deliberating before convicting Paris Mayo of murder?",
+        "Before reaching a murder conviction for Paris Mayo, how long did the jury deliberate?",
+        "How many hours and minutes did the jury deliberate before deciding on Paris Mayo's murder conviction?",
+        "What was the length of the jury's deliberation that led to Paris Mayo's conviction for murder?"
+      ],
+      "timestamp": "2025-07-31T19:04:02.467387",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_33",
+      "original_question": "Who was the head of OceanGate that died on 18 June?",
+      "original_answer": [
+        "Stockton Rush"
+      ],
+      "rewritten_questions": [
+        "What was the name of the OceanGate executive who passed away on June 18?",
+        "On June 18, who was the leader of OceanGate that died?",
+        "Who died on June 18 while serving as the CEO of OceanGate?",
+        "Which OceanGate official passed away on the 18th of June?",
+        "Who was the OceanGate head who died on June 18?"
+      ],
+      "timestamp": "2025-07-31T19:04:05.641761",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_34",
+      "original_question": "At what time were residents asked to leave by police according to Susan?",
+      "original_answer": [
+        "about 07:00 BST"
+      ],
+      "rewritten_questions": [
+        "What time did Susan say the police instructed residents to evacuate?",
+        "According to Susan, when did the police request that residents vacate the area?",
+        "At what hour did the police tell residents to leave, as stated by Susan?",
+        "When did Susan mention that the police asked residents to depart?",
+        "What was the time residents were told to leave by the police, based on Susan's account?"
+      ],
+      "timestamp": "2025-07-31T19:04:09.737177",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_35",
+      "original_question": "Who was in imperious form as he came from sixth on the grid to win the Belgian Grand Prix?",
+      "original_answer": [
+        "Max Verstappen"
+      ],
+      "rewritten_questions": [
+        "Which driver showcased dominant performance by climbing from sixth on the grid to claim victory at the Belgian Grand Prix?",
+        "Who displayed exceptional skill by starting from sixth position and winning the Belgian Grand Prix?",
+        "Who emerged victorious at the Belgian Grand Prix after beginning the race in sixth place on the grid?",
+        "In a commanding display, which racer advanced from sixth on the grid to win the Belgian Grand Prix?",
+        "Who proved unbeatable by moving from sixth on the grid to take first place at the Belgian Grand Prix?"
+      ],
+      "timestamp": "2025-07-31T19:04:13.730624",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_36",
+      "original_question": "At what time did the break-in happen at Twiglet's owner's house?",
+      "original_answer": [
+        "about 15:00 BST"
+      ],
+      "rewritten_questions": [
+        "When did the burglary occur at the residence of Twiglet's owner?",
+        "What was the time of the break-in at the home of Twiglet's owner?",
+        "Can you tell me at what hour the intrusion happened at Twiglet's owner's house?",
+        "Around what time did the incident happen at the house of Twiglet's owner?",
+        "What time did the break-in take place at Twiglet's owner's residence?"
+      ],
+      "timestamp": "2025-07-31T19:04:16.596549",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_37",
+      "original_question": "Where will banks in the UK be able to borrow money from instead of the open market?",
+      "original_answer": [
+        "the Bank of England"
+      ],
+      "rewritten_questions": [
+        "From which institution can UK banks borrow funds instead of using the open market?",
+        "What alternative source will UK banks have for borrowing money other than the open market?",
+        "Which entity will offer loans to banks in the UK as an alternative to the open market?",
+        "Where can banks in the UK obtain loans if they choose not to use the open market?",
+        "What is the new borrowing option for UK banks that replaces the open market?"
+      ],
+      "timestamp": "2025-07-31T19:04:20.489122",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_38",
+      "original_question": "According to Ms Cullen, what was the status of all the exemptions requested by Great Ormond Street Hospital?",
+      "original_answer": [
+        "All of the exemptions that Great Ormond Street requested of the Royal College of Nursing were granted earlier yesterday."
+      ],
+      "rewritten_questions": [
+        "What did Ms. Cullen report about the outcome of the exemption requests made by Great Ormond Street Hospital?",
+        "Could you tell me what Ms. Cullen said regarding the approval status of the exemptions Great Ormond Street Hospital applied for?",
+        "How did Ms. Cullen describe the result of the exemption applications submitted by Great Ormond Street Hospital?",
+        "What information did Ms. Cullen provide about the exemptions that Great Ormond Street Hospital asked for?",
+        "What was Ms. Cullen's update on the exemptions Great Ormond Street Hospital sought from the Royal College of Nursing?"
+      ],
+      "timestamp": "2025-07-31T19:04:25.705714",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_39",
+      "original_question": "How many parties initially faced charges in December 2020 related to the White Island eruption?",
+      "original_answer": [
+        "Thirteen parties"
+      ],
+      "rewritten_questions": [
+        "In December 2020, how many entities were charged in connection with the White Island eruption?",
+        "What was the total number of parties that were initially charged in relation to the White Island eruption in December 2020?",
+        "As of December 2020, how many individuals or organizations were charged concerning the White Island eruption?",
+        "How many parties were initially facing charges in December 2020 due to the White Island eruption incident?",
+        "In relation to the White Island eruption, how many parties were charged in December 2020?"
+      ],
+      "timestamp": "2025-07-31T19:04:28.861421",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_40",
+      "original_question": "What did the Wimbledon crowd do after Venus Williams' 24th Open era appearance ended?",
+      "original_answer": [
+        "received a standing ovation"
+      ],
+      "rewritten_questions": [
+        "How did the audience at Wimbledon react when Venus Williams concluded her 24th Open era appearance?",
+        "What was the crowd's response at Wimbledon following the end of Venus Williams' 24th Open era match?",
+        "After Venus Williams finished her 24th Open era appearance, what action did the Wimbledon spectators take?",
+        "What gesture did the Wimbledon crowd make to honor Venus Williams at the close of her 24th Open era appearance?",
+        "How did the spectators at Wimbledon show their appreciation after Venus Williams' 24th Open era appearance concluded?"
+      ],
+      "timestamp": "2025-07-31T19:04:33.398071",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_41",
+      "original_question": "What is the length marine reptiles mentioned in the excerpt could grow up to?",
+      "original_answer": [
+        "12m-long"
+      ],
+      "rewritten_questions": [
+        "How long could the marine reptiles described in the excerpt potentially grow?",
+        "According to the excerpt, what maximum length could the marine reptiles reach?",
+        "What was the potential maximum size of the marine reptiles in the excerpt?",
+        "In the excerpt, up to what length could the marine reptiles grow?",
+        "What is the maximum length mentioned in the excerpt that marine reptiles could achieve?"
+      ],
+      "timestamp": "2025-07-31T19:04:36.861074",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_42",
+      "original_question": "How many days did Imogen spend in NICU at Swansea before being moved to the Princess of Wales Hospital?",
+      "original_answer": [
+        "98 days"
+      ],
+      "rewritten_questions": [
+        "For how many days was Imogen in the NICU at Swansea before her transfer to the Princess of Wales Hospital?",
+        "What was the duration of Imogen's stay in the NICU at Swansea prior to being relocated to the Princess of Wales Hospital?",
+        "Before moving to the Princess of Wales Hospital, how long did Imogen stay in the NICU at Swansea?",
+        "Can you tell me the number of days Imogen spent in the Swansea NICU before she was transferred to the Princess of Wales Hospital?",
+        "How long did Imogen remain in Swansea's NICU before being moved to the Princess of Wales Hospital?"
+      ],
+      "timestamp": "2025-07-31T19:04:40.356288",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_43",
+      "original_question": "From which age would people be able to apply for a gender recognition certificate (GRC) under the proposed Gender Recognition Bill in Scotland?",
+      "original_answer": [
+        "16"
+      ],
+      "rewritten_questions": [
+        "At what minimum age could individuals apply for a gender recognition certificate according to the proposed Gender Recognition Bill in Scotland?",
+        "Under the proposed Gender Recognition Bill in Scotland, starting from what age can people apply for a gender recognition certificate?",
+        "What is the minimum age requirement for applying for a gender recognition certificate under Scotland's proposed Gender Recognition Bill?",
+        "According to the proposed Gender Recognition Bill in Scotland, from what age is someone eligible to apply for a gender recognition certificate?",
+        "Under the proposed changes in the Gender Recognition Bill in Scotland, at what age can individuals start applying for a gender recognition certificate?"
+      ],
+      "timestamp": "2025-07-31T19:04:43.735134",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_44",
+      "original_question": "When is the new government public warning system test expected to take place?",
+      "original_answer": [
+        "23 April"
+      ],
+      "rewritten_questions": [
+        "On what date is the test for the new government public warning system scheduled?",
+        "When is the planned test for the government's new public alert system?",
+        "What is the scheduled date for the trial of the new public warning system by the government?",
+        "When is the government expected to conduct the test for the new public warning system?",
+        "What day is the new government public warning system test set to occur?"
+      ],
+      "timestamp": "2025-07-31T19:04:48.343939",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_45",
+      "original_question": "Which water company's chief financial officer also decided to decline his bonus?",
+      "original_answer": [
+        "Thames Water"
+      ],
+      "rewritten_questions": [
+        "Which company's CFO chose not to accept their bonus this year?",
+        "The CFO of which water supplier opted out of receiving a bonus?",
+        "In which water company did the chief financial officer decide to forgo their bonus?",
+        "Which water utility's CFO also turned down their bonus?",
+        "The chief financial officer from which company declined his bonus?"
+      ],
+      "timestamp": "2025-07-31T19:04:51.922298",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_46",
+      "original_question": "How many days passed since Putin shattered European security before Mr Healey criticized the delayed plan?",
+      "original_answer": [
+        "510 days"
+      ],
+      "rewritten_questions": [
+        "How many days elapsed from when Putin destabilized European security to when Mr. Healey condemned the postponed plan?",
+        "What is the number of days between Putin's disruption of European security and Mr. Healey's criticism of the plan delay?",
+        "How many days were there from the time Putin threatened European security until Mr. Healey spoke out against the plan's delay?",
+        "From the point when Putin undermined European security, how many days passed before Mr. Healey criticized the plan's postponement?",
+        "How many days went by after Putin compromised European security before Mr. Healey expressed disapproval of the plan's delay?"
+      ],
+      "timestamp": "2025-07-31T19:04:57.556877",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_47",
+      "original_question": "How many days did Cathie and Tricia spend travelling from west to east Canada?",
+      "original_answer": [
+        "51 days"
+      ],
+      "rewritten_questions": [
+        "What was the duration, in days, of Cathie and Tricia's journey across Canada from west to east?",
+        "How long did Cathie and Tricia take to travel from the western to the eastern part of Canada?",
+        "In total, how many days were spent by Cathie and Tricia traveling across Canada from the west coast to the east coast?",
+        "How many days did it take for Cathie and Tricia to complete their trip across Canada from west to east?",
+        "What is the total number of days Cathie and Tricia spent on their journey from the west to the east of Canada?"
+      ],
+      "timestamp": "2025-07-31T19:05:01.757011",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_48",
+      "original_question": "How long was Edward Weeks jailed for after admitting rape?",
+      "original_answer": [
+        "eight years"
+      ],
+      "rewritten_questions": [
+        "What was the length of Edward Weeks' prison sentence after he confessed to rape?",
+        "After admitting to rape, how many years did Edward Weeks receive as a jail sentence?",
+        "For how many years was Edward Weeks incarcerated following his admission of rape?",
+        "How many years did Edward Weeks serve in jail for pleading guilty to rape?",
+        "What was the duration of Edward Weeks' imprisonment after he admitted to committing rape?"
+      ],
+      "timestamp": "2025-07-31T19:05:04.931613",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_49",
+      "original_question": "How many MiG-29s did Slovakia approve to send to Ukraine, according to the Prime Minister's tweet?",
+      "original_answer": [
+        "13 MiG-29s"
+      ],
+      "rewritten_questions": [
+        "According to a tweet from the Slovak Prime Minister, how many MiG-29 fighter jets are being sent to Ukraine?",
+        "How many MiG-29 aircraft did Slovakia decide to provide to Ukraine, as stated in the Prime Minister's social media post?",
+        "Based on the Slovak Prime Minister's tweet, what is the number of MiG-29s approved for delivery to Ukraine?",
+        "As per the Slovak Prime Minister's tweet, how many MiG-29 jets will be sent to Ukraine?",
+        "How many MiG-29s did Slovakia agree to transfer to Ukraine, according to the Prime Minister's announcement on Twitter?"
+      ],
+      "timestamp": "2025-07-31T19:05:08.615696",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_50",
+      "original_question": "What is Luke's predicted score for the Tottenham match?",
+      "original_answer": [
+        "3-1"
+      ],
+      "rewritten_questions": [
+        "How does Luke predict the final score will turn out for the Tottenham game?",
+        "What score does Luke anticipate for the upcoming match involving Tottenham?",
+        "According to Luke, what will be the result of the Tottenham match?",
+        "What is Luke's forecast for the scoreline of the Tottenham match?",
+        "How does Luke expect the Tottenham game to conclude in terms of score?"
+      ],
+      "timestamp": "2025-07-31T19:05:11.585101",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_51",
+      "original_question": "How many days was another 13-year-old Queensland boy with developmental disabilities confined to a cell for 20 hours per day?",
+      "original_answer": [
+        "78 days"
+      ],
+      "rewritten_questions": [
+        "For how many days was a 13-year-old boy with developmental disabilities in Queensland kept in a cell for 20 hours each day?",
+        "How long, in days, was a 13-year-old boy with developmental issues from Queensland held in a cell for 20 hours daily?",
+        "What is the total number of days a 13-year-old boy with developmental disabilities in Queensland was confined to a cell for 20 hours a day?",
+        "Over how many days was a Queensland boy, aged 13 and with developmental disabilities, locked in a cell for 20 hours per day?",
+        "How many days did a 13-year-old boy with developmental disabilities in Queensland spend confined in a cell for 20 hours each day?"
+      ],
+      "timestamp": "2025-07-31T19:05:15.781929",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_52",
+      "original_question": "For how many days did Cathie and Tricia travel from west to east Canada?",
+      "original_answer": [
+        "51 days"
+      ],
+      "rewritten_questions": [
+        "How long did Cathie and Tricia spend journeying from the western part of Canada to the eastern part?",
+        "What was the duration, in days, of Cathie and Tricia's trip across Canada from west to east?",
+        "How many days did it take Cathie and Tricia to traverse Canada from the west coast to the east coast?",
+        "Over how many days did Cathie and Tricia travel eastward across Canada?",
+        "For what number of days did Cathie and Tricia's eastward journey across Canada last?"
+      ],
+      "timestamp": "2025-07-31T19:05:21.208739",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_53",
+      "original_question": "Who is the general secretary of the RMT that called the vote a 'de-facto referendum on the dispute'?",
+      "original_answer": [
+        "Mick Lynch"
+      ],
+      "rewritten_questions": [
+        "Which RMT general secretary described the vote as a 'de-facto referendum on the dispute'?",
+        "Who referred to the vote as a 'de-facto referendum on the dispute' in their role as general secretary of the RMT?",
+        "Identify the RMT official who termed the vote a 'de-facto referendum on the dispute.'",
+        "Who, as the RMT general secretary, labeled the vote a 'de-facto referendum on the dispute'?",
+        "Can you name the general secretary of the RMT who called the vote a 'de-facto referendum on the dispute'?"
+      ],
+      "timestamp": "2025-07-31T19:05:24.126271",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_54",
+      "original_question": "How many days had students trapped in the headquarters of an oil company in Khartoum gone without food or water?",
+      "original_answer": [
+        "three days"
+      ],
+      "rewritten_questions": [
+        "For how many days did the students in the Khartoum oil company headquarters endure without food or water?",
+        "What was the duration that students inside the oil company's headquarters in Khartoum went without sustenance?",
+        "How long did the students remain at the oil company headquarters in Khartoum without access to food or water?",
+        "How many days did the students survive without food or water while trapped in the oil company's headquarters in Khartoum?",
+        "What was the number of days students in the Khartoum headquarters of an oil company lacked food and water?"
+      ],
+      "timestamp": "2025-07-31T19:05:28.641535",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_55",
+      "original_question": "How many pupils referred to the EWS by schools were on a waiting list at the end of March 2023?",
+      "original_answer": [
+        "1,751"
+      ],
+      "rewritten_questions": [
+        "What was the number of students on a waiting list for the EWS as of the end of March 2023, after being referred by schools?",
+        "By the end of March 2023, how many school-referred pupils were waiting for services from the EWS?",
+        "As of March 31, 2023, how many students were schools still waiting to be processed by the EWS?",
+        "How many children referred to the EWS by educational institutions were still on a waiting list at the close of March 2023?",
+        "At the end of March 2023, how many school-referred students were on the EWS waiting list?"
+      ],
+      "timestamp": "2025-07-31T19:05:32.370023",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_56",
+      "original_question": "Who were the rulers that attended a garden party at Hillsborough Castle, marking their first official visit outside England since the coronation?",
+      "original_answer": [
+        "King Charles and Queen Camilla"
+      ],
+      "rewritten_questions": [
+        "Which monarchs made their first official visit outside of England since their coronation by attending a garden party at Hillsborough Castle?",
+        "At a garden party in Hillsborough Castle, which royal couple marked their initial official trip outside of England since being crowned?",
+        "Who were the reigning royals that participated in a garden party at Hillsborough Castle, signifying their first official journey outside of England post-coronation?",
+        "Which rulers attended a garden party at Hillsborough Castle, signifying their inaugural official outing beyond England since their coronation?",
+        "At Hillsborough Castle, which crowned heads attended a garden party for their first formal visit outside England since being coronated?"
+      ],
+      "timestamp": "2025-07-31T19:05:38.106633",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_57",
+      "original_question": "At what local time was the bright glow observed in the sky over Kyiv?",
+      "original_answer": [
+        "around 22:00 local time"
+      ],
+      "rewritten_questions": [
+        "When was the bright light seen in the sky above Kyiv?",
+        "What was the local time when people in Kyiv noticed the bright glow in the sky?",
+        "At what time did the sky over Kyiv exhibit a bright glow?",
+        "Around what time did the bright light appear over Kyiv?",
+        "What time did the bright glow become visible in Kyiv's sky?"
+      ],
+      "timestamp": "2025-07-31T19:05:41.010506",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_58",
+      "original_question": "What is the distance from Earth to the event called AT2021lwx as calculated by Dr. Philip Wiseman's team?",
+      "original_answer": [
+        "8bn light years away"
+      ],
+      "rewritten_questions": [
+        "How far from Earth did Dr. Philip Wiseman's team determine the event AT2021lwx to be?",
+        "According to the calculations made by Dr. Philip Wiseman's team, what is the distance between Earth and AT2021lwx?",
+        "What did Dr. Philip Wiseman's team find to be the distance from our planet to the event identified as AT2021lwx?",
+        "How many light years away is the event AT2021lwx from Earth, as estimated by Dr. Philip Wiseman's research group?",
+        "What is the measured distance to the event AT2021lwx from Earth, based on the findings of Dr. Philip Wiseman's team?"
+      ],
+      "timestamp": "2025-07-31T19:05:45.172424",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_59",
+      "original_question": "How many people were treated at the scene of the incident at Imperial Dock in Leith?",
+      "original_answer": [
+        "12 people"
+      ],
+      "rewritten_questions": [
+        "What was the total number of individuals who received treatment at the site of the Imperial Dock incident in Leith?",
+        "How many individuals were attended to at the location of the incident at Imperial Dock in Leith?",
+        "At the scene of the incident at Imperial Dock in Leith, how many people were given medical attention?",
+        "How many people received on-site treatment at the Imperial Dock incident in Leith?",
+        "What is the count of people who were treated at the scene of the Imperial Dock incident in Leith?"
+      ],
+      "timestamp": "2025-07-31T19:05:48.470453",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_60",
+      "original_question": "How many inquiries and inquests have been conducted regarding the case of Mr. Morgan's death?",
+      "original_answer": [
+        "five inquiries and an inquest"
+      ],
+      "rewritten_questions": [
+        "What is the total number of investigations and formal examinations that have been carried out concerning Mr. Morgan's death?",
+        "How many official probes and judicial reviews have been completed in relation to the circumstances of Mr. Morgan's demise?",
+        "Can you tell me the number of inquiries and inquests that have taken place regarding the death of Mr. Morgan?",
+        "What is the count of inquiries and inquests conducted to look into Mr. Morgan's death?",
+        "How many investigations and inquests have been undertaken to examine the details of Mr. Morgan's death?"
+      ],
+      "timestamp": "2025-07-31T19:05:52.232596",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_61",
+      "original_question": "How many birds does Ioan Humphreys have on his farm?",
+      "original_answer": [
+        "32,000 birds"
+      ],
+      "rewritten_questions": [
+        "What is the total number of birds on Ioan Humphreys' farm?",
+        "Ioan Humphreys' farm is home to how many birds?",
+        "How many birds are kept by Ioan Humphreys on his farm?",
+        "What is the bird count on Ioan Humphreys' farm?",
+        "How many birds does Ioan Humphreys raise on his farm?"
+      ],
+      "timestamp": "2025-07-31T19:05:55.154312",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_62",
+      "original_question": "In which year did Fiona Wightman split from comedian Paul Whitehouse while also facing a cancer diagnosis?",
+      "original_answer": [
+        "2000"
+      ],
+      "rewritten_questions": [
+        "What year did Fiona Wightman separate from comedian Paul Whitehouse while dealing with a cancer diagnosis?",
+        "During which year did Fiona Wightman and comedian Paul Whitehouse part ways as she was also diagnosed with cancer?",
+        "Fiona Wightman ended her relationship with comedian Paul Whitehouse in the same year she was diagnosed with cancer. When did this occur?",
+        "In what year did Fiona Wightman and comedian Paul Whitehouse break up, coinciding with her cancer diagnosis?",
+        "When did Fiona Wightman face both a breakup with comedian Paul Whitehouse and a cancer diagnosis?"
+      ],
+      "timestamp": "2025-07-31T19:05:58.790012",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_63",
+      "original_question": "What date did all five people on board the Titan submersible die?",
+      "original_answer": [
+        "18 June"
+      ],
+      "rewritten_questions": [
+        "On what date did the five individuals aboard the Titan submersible lose their lives?",
+        "When did the tragic event resulting in the deaths of all five occupants of the Titan submersible occur?",
+        "What is the date that marks the fatal incident for everyone on the Titan submersible?",
+        "Can you tell me the date when all five passengers on the Titan submersible perished?",
+        "What was the date of the catastrophe that claimed the lives of all five people on the Titan submersible?"
+      ],
+      "timestamp": "2025-07-31T19:06:01.789134",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_64",
+      "original_question": "How many pages did the thirty-seven documents found in the locked cabinet at New Scotland Yard span?",
+      "original_answer": [
+        "95 pages"
+      ],
+      "rewritten_questions": [
+        "What was the total number of pages across the thirty-seven documents discovered in the locked cabinet at New Scotland Yard?",
+        "How many pages were there in the collection of thirty-seven documents located in the secured cabinet at New Scotland Yard?",
+        "What is the page count for the thirty-seven documents that were found in the locked cabinet at New Scotland Yard?",
+        "How extensive, in terms of pages, were the thirty-seven documents retrieved from the locked cabinet at New Scotland Yard?",
+        "What was the total page span of the thirty-seven documents uncovered in the locked cabinet at New Scotland Yard?"
+      ],
+      "timestamp": "2025-07-31T19:06:05.181664",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_65",
+      "original_question": "How much did commuter Mimi Kihumulendi say it costs to commute from Reading to London for a year?",
+      "original_answer": [
+        "nearly £6,000"
+      ],
+      "rewritten_questions": [
+        "What did commuter Mimi Kihumulendi report as the annual cost of commuting from Reading to London?",
+        "According to Mimi Kihumulendi, how much does it cost annually to travel from Reading to London for work?",
+        "How much did Mimi Kihumulendi indicate it costs per year to commute between Reading and London?",
+        "What is the yearly commuting expense from Reading to London, as mentioned by Mimi Kihumulendi?",
+        "How much did Mimi Kihumulendi claim it costs for a yearly commute from Reading to London?"
+      ],
+      "timestamp": "2025-07-31T19:06:09.589757",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_66",
+      "original_question": "What is the highest level the Fed's key interest rate has reached since 2007, according to the excerpt?",
+      "original_answer": [
+        "4.75%-5%"
+      ],
+      "rewritten_questions": [
+        "According to the passage, what is the peak level the Federal Reserve's main interest rate has attained since 2007?",
+        "Since 2007, what has been the maximum rate of the Fed's key interest rate as mentioned in the excerpt?",
+        "What is the highest point the Federal Reserve's primary interest rate has achieved since 2007, based on the text?",
+        "As per the excerpt, what is the top level reached by the Fed's benchmark interest rate since 2007?",
+        "What is the greatest level the Fed's essential interest rate has hit since 2007, according to the passage?"
+      ],
+      "timestamp": "2025-07-31T19:06:13.006621",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_67",
+      "original_question": "What is the length of time for which the Treherbert line will close as part of the Valleys network electrification?",
+      "original_answer": [
+        "around ten months"
+      ],
+      "rewritten_questions": [
+        "How long will the Treherbert line remain closed due to the Valleys network electrification project?",
+        "For what duration will the Treherbert line be shut down as part of the Valleys network's electrification?",
+        "What is the expected closure period for the Treherbert line during the Valleys network electrification?",
+        "How many months will the Treherbert line be out of service for the Valleys network electrification effort?",
+        "What is the anticipated length of the Treherbert line's closure for the electrification of the Valleys network?"
+      ],
+      "timestamp": "2025-07-31T19:06:17.387204",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_68",
+      "original_question": "What type of courtroom has been set up inside the prison for Navalny's trial?",
+      "original_answer": [
+        "temporary courtroom"
+      ],
+      "rewritten_questions": [
+        "What kind of courtroom has been arranged within the prison for Navalny's trial?",
+        "Inside the prison, what sort of courtroom has been established for Navalny's trial?",
+        "For Navalny's trial, what type of courtroom has been created inside the prison?",
+        "What is the nature of the courtroom set up within the prison for Navalny's trial?",
+        "How is the courtroom described that has been set up in the prison for Navalny's trial?"
+      ],
+      "timestamp": "2025-07-31T19:06:19.985647",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_69",
+      "original_question": "How many years ago did David and Janice Hunter retire to Cyprus?",
+      "original_answer": [
+        "20 years ago"
+      ],
+      "rewritten_questions": [
+        "When did David and Janice Hunter move to Cyprus after retiring?",
+        "How long has it been since David and Janice Hunter retired to Cyprus?",
+        "How many years have passed since the Hunters retired to Cyprus?",
+        "In what year did David and Janice Hunter retire to live in Cyprus?",
+        "How many years ago did the Hunters choose Cyprus as their retirement home?"
+      ],
+      "timestamp": "2025-07-31T19:06:23.014002",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_70",
+      "original_question": "At what time did the incident with the Petrel begin, according to Dales Marine Services?",
+      "original_answer": [
+        "08:00"
+      ],
+      "rewritten_questions": [
+        "When did Dales Marine Services report the start of the incident involving the Petrel?",
+        "According to Dales Marine Services, what was the starting time of the Petrel incident?",
+        "What time was given by Dales Marine Services as the beginning of the incident with the Petrel?",
+        "At what hour did Dales Marine Services state that the Petrel incident commenced?",
+        "As per Dales Marine Services, when did the incident concerning the Petrel initiate?"
+      ],
+      "timestamp": "2025-07-31T19:06:26.792620",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_71",
+      "original_question": "What did Alex Murdaugh pocket from the Satterfield's insurance policies?",
+      "original_answer": [
+        "$4.3m"
+      ],
+      "rewritten_questions": [
+        "How much money did Alex Murdaugh take from the Satterfield family's insurance payouts?",
+        "What amount did Alex Murdaugh embezzle from the insurance policies related to the Satterfield case?",
+        "From the Satterfield insurance settlements, how much did Alex Murdaugh steal?",
+        "What was the total sum Alex Murdaugh illegally acquired from the Satterfield insurance claims?",
+        "How much did Alex Murdaugh wrongfully obtain from the insurance funds meant for the Satterfields?"
+      ],
+      "timestamp": "2025-07-31T19:06:31.294904",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_72",
+      "original_question": "What is the estimated number of Twitter Blue subscribers in March 2023 according to Sensor Tower?",
+      "original_answer": [
+        "around 386,000"
+      ],
+      "rewritten_questions": [
+        "How many Twitter Blue subscribers were estimated to exist in March 2023 by Sensor Tower?",
+        "According to Sensor Tower, what was the approximate count of Twitter Blue subscribers in March 2023?",
+        "In March 2023, what did Sensor Tower estimate as the number of Twitter Blue subscribers?",
+        "What estimate did Sensor Tower give for the number of Twitter Blue users in March 2023?",
+        "As per Sensor Tower's report, what was the subscriber count for Twitter Blue in March 2023?"
+      ],
+      "timestamp": "2025-07-31T19:06:35.320491",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_73",
+      "original_question": "Which royal family member shook hands with Dean of Windsor David Conner as she left the chapel?",
+      "original_answer": [
+        "Princess Charlotte"
+      ],
+      "rewritten_questions": [
+        "Who was the royal family member that shook hands with the Dean of Windsor, David Conner, upon exiting the chapel?",
+        "As she departed the chapel, which member of the royal family greeted Dean of Windsor David Conner with a handshake?",
+        "Who in the royal family exchanged a handshake with Dean of Windsor David Conner when leaving the chapel?",
+        "Which royal figure shook hands with David Conner, the Dean of Windsor, as she left the chapel?",
+        "Upon leaving the chapel, which royal family member shook hands with the Dean of Windsor, David Conner?"
+      ],
+      "timestamp": "2025-07-31T19:06:38.622096",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_74",
+      "original_question": "How many YouTube views did Bad Bunny's track Dos Mil 16 acquire after the release of Un Verano Sin Ti?",
+      "original_answer": [
+        "60 million"
+      ],
+      "rewritten_questions": [
+        "What was the number of YouTube views for Bad Bunny's song Dos Mil 16 following the release of the album Un Verano Sin Ti?",
+        "After Un Verano Sin Ti came out, how many views did Dos Mil 16 by Bad Bunny get on YouTube?",
+        "Following the release of Un Verano Sin Ti, how many times was Bad Bunny's Dos Mil 16 viewed on YouTube?",
+        "How many views did Bad Bunny's track Dos Mil 16 accumulate on YouTube after the album Un Verano Sin Ti was launched?",
+        "What was the view count for Bad Bunny's Dos Mil 16 on YouTube after Un Verano Sin Ti was released?"
+      ],
+      "timestamp": "2025-07-31T19:06:41.864396",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_75",
+      "original_question": "How many tourists did Ibiza receive last year?",
+      "original_answer": [
+        "four million"
+      ],
+      "rewritten_questions": [
+        "What was the total number of tourists visiting Ibiza last year?",
+        "Can you tell me the number of tourists who went to Ibiza in the previous year?",
+        "How many people traveled to Ibiza as tourists over the past year?",
+        "What is the count of tourists that Ibiza hosted last year?",
+        "How many visitors did Ibiza welcome last year?"
+      ],
+      "timestamp": "2025-07-31T19:06:45.381470",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_76",
+      "original_question": "What color tablets are thought to be benzodiazepines according to the Public Health Agency?",
+      "original_answer": [
+        "yellow tablets"
+      ],
+      "rewritten_questions": [
+        "According to the Public Health Agency, which color tablets are commonly identified as benzodiazepines?",
+        "The Public Health Agency associates benzodiazepines with tablets of what color?",
+        "What hue of tablets does the Public Health Agency link to benzodiazepines?",
+        "As per the Public Health Agency, benzodiazepines are believed to be what color tablets?",
+        "Which color is attributed to benzodiazepine tablets by the Public Health Agency?"
+      ],
+      "timestamp": "2025-07-31T19:06:48.454650",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_77",
+      "original_question": "According to the text, who has the right to disclose military plans publicly in Ukraine?",
+      "original_answer": [
+        "the president, the minister of defence, and the commander in chief"
+      ],
+      "rewritten_questions": [
+        "Who, as mentioned in the text, is authorized to make military plans public in Ukraine?",
+        "In Ukraine, who is permitted to publicly reveal military plans, according to the text?",
+        "As per the text, which individuals are allowed to disclose military plans to the public in Ukraine?",
+        "According to the text, who can lawfully announce military plans to the public in Ukraine?",
+        "Who has the authority to publicly share military plans in Ukraine, based on the text?"
+      ],
+      "timestamp": "2025-07-31T19:06:52.200501",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_78",
+      "original_question": "What are the names of the two species that have been added to the newly named Saurona genus?",
+      "original_answer": [
+        "Saurona triangular and Saurona aurigera"
+      ],
+      "rewritten_questions": [
+        "Can you list the two species that were recently classified under the Saurona genus?",
+        "Which two species have been introduced into the newly designated Saurona genus?",
+        "What are the two species that have been included in the Saurona genus after its recent naming?",
+        "Identify the names of the two species that have been assigned to the new genus called Saurona.",
+        "What are the names of the two species that belong to the newly established genus Saurona?"
+      ],
+      "timestamp": "2025-07-31T19:06:56.231291",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_79",
+      "original_question": "Which two cities in the UK will see job creation related to the construction of the new submarine model SSN-AUKUS?",
+      "original_answer": [
+        "Derby and Barrow-in-Furness"
+      ],
+      "rewritten_questions": [
+        "What are the two UK cities where jobs will be generated due to the development of the new SSN-AUKUS submarine?",
+        "In which two cities in the United Kingdom will employment opportunities arise from the building of the SSN-AUKUS submarine?",
+        "Can you name the two UK cities expected to experience job growth from the construction of the SSN-AUKUS submarine?",
+        "Which pair of cities in the UK are set to benefit from job creation linked to the SSN-AUKUS submarine project?",
+        "Where in the UK will job opportunities be created as a result of the SSN-AUKUS submarine's construction?"
+      ],
+      "timestamp": "2025-07-31T19:07:00.208236",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_80",
+      "original_question": "Which song did Elton John dedicate to George Michael during his final show in the UK at Glastonbury?",
+      "original_answer": [
+        "Don't Let The Sun Go Down On Me"
+      ],
+      "rewritten_questions": [
+        "What song did Elton John tribute to George Michael at his last UK performance at Glastonbury?",
+        "During his final UK show at Glastonbury, which song did Elton John dedicate to George Michael?",
+        "Which song was dedicated by Elton John to George Michael at his concluding UK concert at Glastonbury?",
+        "At Glastonbury, which track did Elton John perform in memory of George Michael during his final UK show?",
+        "What was the name of the song Elton John dedicated to George Michael in his last UK show at Glastonbury?"
+      ],
+      "timestamp": "2025-07-31T19:07:03.403552",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_81",
+      "original_question": "What did the IDF and ISA say is their mission regarding abductees?",
+      "original_answer": [
+        "to locate and return the abductees home"
+      ],
+      "rewritten_questions": [
+        "What mission have the IDF and ISA committed to concerning the abductees?",
+        "How do the IDF and ISA describe their objectives related to the abductees?",
+        "What is the stated goal of the IDF and ISA in terms of the abductees?",
+        "Regarding the abductees, what have the IDF and ISA identified as their mission?",
+        "What did the IDF and ISA declare as their aim for dealing with the abductees?"
+      ],
+      "timestamp": "2025-07-31T19:07:07.655524",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_82",
+      "original_question": "What did Chief Constable Pam Kelly say about the content shared with Gwent Police?",
+      "original_answer": [
+        "The content shared with us is vile"
+      ],
+      "rewritten_questions": [
+        "How did Chief Constable Pam Kelly describe the material that was shared with Gwent Police?",
+        "What was Chief Constable Pam Kelly's reaction to the information provided to Gwent Police?",
+        "According to Chief Constable Pam Kelly, what was her opinion on the content received by Gwent Police?",
+        "What comment did Chief Constable Pam Kelly make regarding the content given to Gwent Police?",
+        "How did Chief Constable Pam Kelly respond to the nature of the content shared with Gwent Police?"
+      ],
+      "timestamp": "2025-07-31T19:07:10.880281",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_83",
+      "original_question": "At what age did Wendy Reilly make her debut for Wales?",
+      "original_answer": [
+        "16"
+      ],
+      "rewritten_questions": [
+        "How old was Wendy Reilly when she first played for Wales?",
+        "At what age did Wendy Reilly first represent Wales in a match?",
+        "When did Wendy Reilly first join the Welsh team, in terms of her age?",
+        "How many years old was Wendy Reilly when she debuted for Wales?",
+        "What was Wendy Reilly's age at her first appearance for the Welsh national team?"
+      ],
+      "timestamp": "2025-07-31T19:07:13.745856",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_84",
+      "original_question": "What specific ailment does a grey squirrel transmit that is lethal to red squirrels?",
+      "original_answer": [
+        "squirrelpox virus"
+      ],
+      "rewritten_questions": [
+        "Which disease carried by grey squirrels proves deadly to red squirrels?",
+        "What is the name of the virus spread by grey squirrels that kills red squirrels?",
+        "Grey squirrels are known to transmit a certain pathogen to red squirrels. What is it called?",
+        "What virus do grey squirrels pass on that is fatal to red squirrels?",
+        "Which illness, spread by grey squirrels, is harmful and often fatal to red squirrels?"
+      ],
+      "timestamp": "2025-07-31T19:07:17.431666",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_85",
+      "original_question": "What phrase did Vladimir Putin use to clarify the funding status of Wagner after the mutiny?",
+      "original_answer": [
+        "100% funded by the Russian state"
+      ],
+      "rewritten_questions": [
+        "How did Vladimir Putin describe the source of funding for Wagner following the mutiny?",
+        "What did Vladimir Putin state about how Wagner was financed after the rebellion?",
+        "After the mutiny, what did Vladimir Putin reveal about who funded Wagner?",
+        "What clarification did Vladimir Putin give on the financial backing of Wagner post-mutiny?",
+        "What explanation did Vladimir Putin provide regarding Wagner's funding after the insurrection?"
+      ],
+      "timestamp": "2025-07-31T19:07:21.321387",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_86",
+      "original_question": "How many episodes of The Wire were aired between 2002 and 2008?",
+      "original_answer": [
+        "60 episodes"
+      ],
+      "rewritten_questions": [
+        "What is the total number of episodes that were broadcast for The Wire from 2002 to 2008?",
+        "Between 2002 and 2008, how many episodes of The Wire were shown on television?",
+        "How many episodes does The Wire have, considering its original air dates from 2002 to 2008?",
+        "From the years 2002 through 2008, how many episodes of The Wire were released?",
+        "During its run from 2002 until 2008, how many episodes of The Wire were aired?"
+      ],
+      "timestamp": "2025-07-31T19:07:24.993757",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_87",
+      "original_question": "How many signatures has the petition gathered so far calling for a review of the inspection at Caversham Primary?",
+      "original_answer": [
+        "more than 150,000"
+      ],
+      "rewritten_questions": [
+        "What is the current total of signatures collected by the petition requesting a review of the Caversham Primary inspection?",
+        "As of now, how many people have signed the petition for a review of the inspection at Caversham Primary?",
+        "What is the number of signatures the petition has amassed that demands a re-evaluation of the Caversham Primary inspection?",
+        "How many individuals have added their signatures to the petition seeking a reassessment of the inspection at Caversham Primary?",
+        "What is the count of signatures on the petition aimed at prompting a review of the Caversham Primary inspection?"
+      ],
+      "timestamp": "2025-07-31T19:07:37.085883",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_88",
+      "original_question": "What was Luke's prediction for the score between Spurs and their opponent?",
+      "original_answer": [
+        "3-1"
+      ],
+      "rewritten_questions": [
+        "How did Luke think the game between the Spurs and their rival would end in terms of score?",
+        "What score did Luke foresee for the match involving the Spurs and the opposing team?",
+        "According to Luke, what would the final score be for the Spurs' game against their competitor?",
+        "What outcome did Luke predict for the scoreboard in the Spurs' match with their adversary?",
+        "What was Luke's anticipated final score for the Spurs' contest with their opponent?"
+      ],
+      "timestamp": "2025-07-31T19:07:40.163150",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_89",
+      "original_question": "How many fake reviews did Amazon block last year as a result of their new methods?",
+      "original_answer": [
+        "over 200 million"
+      ],
+      "rewritten_questions": [
+        "What was the total number of counterfeit reviews Amazon prevented last year due to their updated strategies?",
+        "How many fraudulent reviews did Amazon successfully intercept last year with their enhanced techniques?",
+        "As a result of implementing new methods, how many fake reviews did Amazon manage to block last year?",
+        "Using their improved methods, how many bogus reviews was Amazon able to stop last year?",
+        "Last year, how many false reviews did Amazon block through the use of their new procedures?"
+      ],
+      "timestamp": "2025-07-31T19:07:43.303111",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_90",
+      "original_question": "What was the hush money payment to porn star Stormy Daniels related to, according to the excerpt?",
+      "original_answer": [
+        "to hide damaging information ahead of the 2016 election"
+      ],
+      "rewritten_questions": [
+        "According to the excerpt, what was the purpose of the hush money paid to Stormy Daniels?",
+        "For what reason was Stormy Daniels given hush money, as described in the excerpt?",
+        "What was the hush money paid to porn star Stormy Daniels intended to conceal, based on the excerpt?",
+        "In the excerpt, why was hush money paid to Stormy Daniels, the porn star?",
+        "What was the intended outcome of the hush money given to Stormy Daniels, according to the excerpt?"
+      ],
+      "timestamp": "2025-07-31T19:07:46.820688",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_91",
+      "original_question": "How many specialist lighting fixtures have been fitted at the Eurovision venue?",
+      "original_answer": [
+        "more than 2,000"
+      ],
+      "rewritten_questions": [
+        "What is the total number of specialized lighting fixtures installed at the Eurovision site?",
+        "Can you tell me how many specialist lighting units have been set up at the Eurovision venue?",
+        "At the Eurovision venue, how many expert lighting fixtures have been put in place?",
+        "How many lighting fixtures designed for specialized use have been fitted at the Eurovision location?",
+        "What is the count of specialist lights that have been installed at the Eurovision venue?"
+      ],
+      "timestamp": "2025-07-31T19:07:58.090029",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_92",
+      "original_question": "What is the specific time that the full BBC interview with Schofield will be available on iPlayer?",
+      "original_answer": [
+        "from 06:00 BST on Friday"
+      ],
+      "rewritten_questions": [
+        "At what time can viewers access the complete BBC interview with Schofield on iPlayer?",
+        "When will the entire BBC interview featuring Schofield be available to watch on iPlayer?",
+        "What is the release time for the full BBC interview with Schofield on iPlayer?",
+        "From what time can the full BBC interview with Schofield be streamed on iPlayer?",
+        "When does the full BBC interview with Schofield become accessible on iPlayer?"
+      ],
+      "timestamp": "2025-07-31T19:08:00.924940",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_93",
+      "original_question": "What was the mandatory minimum sentence for Cartagena's crime according to the court papers?",
+      "original_answer": [
+        "five years in prison"
+      ],
+      "rewritten_questions": [
+        "According to the court documents, what was the compulsory minimum sentence for the crime committed by Cartagena?",
+        "What minimum prison term did the court papers stipulate for Cartagena's offense?",
+        "From the court records, what was the least amount of time Cartagena had to serve for the crime?",
+        "As per the court filings, what mandatory sentence length was set for Cartagena's crime?",
+        "What was the required minimum jail time for Cartagena's crime as outlined in the court papers?"
+      ],
+      "timestamp": "2025-07-31T19:08:04.207088",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_94",
+      "original_question": "Which major Russian outlets were silenced, shut down, or blocked after the war began?",
+      "original_answer": [
+        "TV Rain, Echo of Moscow radio and newspaper Novaya Gazeta"
+      ],
+      "rewritten_questions": [
+        "What are the main Russian media organizations that were either shut down or blocked following the start of the war?",
+        "After the conflict began, which significant Russian news outlets were closed or silenced?",
+        "Which prominent Russian media platforms faced closure or restrictions once the war commenced?",
+        "Can you name the key Russian media entities that were either silenced or shut down after the war started?",
+        "Which major Russian news sources were blocked or ceased operations after the onset of the war?"
+      ],
+      "timestamp": "2025-07-31T19:08:07.836720",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_95",
+      "original_question": "According to the report, what did the police wrongly tell Ernest Moret he would not be able to do if convicted for not sharing his PINs?",
+      "original_answer": [
+        "never be able to travel internationally again"
+      ],
+      "rewritten_questions": [
+        "What did the report say the police incorrectly informed Ernest Moret he would be prohibited from doing globally if found guilty of withholding his PINs?",
+        "According to the report, what did the police falsely tell Ernest Moret regarding his ability to travel abroad if he didn't disclose his PINs and was convicted?",
+        "In the report, what did the police mistakenly claim Ernest Moret would lose the ability to do internationally if he was convicted for not providing his PINs?",
+        "What did the police incorrectly assert, as mentioned in the report, that Ernest Moret would be unable to do worldwide if he was found guilty of not sharing his PINs?",
+        "According to the report, what did the police wrongly convey to Ernest Moret about his future international travel prospects if convicted for refusing to give his PINs?"
+      ],
+      "timestamp": "2025-07-31T19:08:11.482066",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_96",
+      "original_question": "What excuse did Bevan provide for Lola's injuries during the trial?",
+      "original_answer": [
+        "a fall down the stairs, after the family's dog pushed her"
+      ],
+      "rewritten_questions": [
+        "During the trial, what reason did Bevan give for how Lola got injured?",
+        "What explanation did Bevan offer in court for the cause of Lola's injuries?",
+        "In the trial, how did Bevan claim Lola sustained her injuries?",
+        "What did Bevan say in court about the cause of Lola's injuries?",
+        "During the proceedings, how did Bevan describe the incident that led to Lola's injuries?"
+      ],
+      "timestamp": "2025-07-31T19:08:15.087359",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_97",
+      "original_question": "Who are the owners of the car company Stellantis?",
+      "original_answer": [
+        "Vauxhall, Peugeot, Citroen and Fiat"
+      ],
+      "rewritten_questions": [
+        "Which companies own the automotive brand Stellantis?",
+        "Stellantis is a car company; who holds its ownership?",
+        "Identify the owners of the Stellantis automotive group.",
+        "Who possesses the ownership of the car manufacturer Stellantis?",
+        "What companies are the proprietors of Stellantis?"
+      ],
+      "timestamp": "2025-07-31T19:08:18.564526",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_98",
+      "original_question": "What was Harman's only missed putt from inside 10 feet for the week?",
+      "original_answer": [
+        "on the short 13th"
+      ],
+      "rewritten_questions": [
+        "During the week, where did Harman miss his only putt from within 10 feet?",
+        "On which hole did Harman fail to make his only putt from inside 10 feet throughout the week?",
+        "For the entire week, which putt from less than 10 feet did Harman miss?",
+        "Where was the location of Harman's sole missed putt from within 10 feet during the week?",
+        "Which hole featured Harman's only missed putt from inside 10 feet for the week?"
+      ],
+      "timestamp": "2025-07-31T19:08:22.663412",
+      "model_used": "gpt-4o"
+    },
+    {
+      "original_id": "knowmem_retain_qa_99",
+      "original_question": "What are the weight-related health conditions listed by NICE that could make someone with a lower obese BMI range eligible for semaglutide?",
+      "original_answer": [
+        "pre-diabetic, has type 2 diabetes, high blood pressure, heart disease or obstructive sleep apnoea"
+      ],
+      "rewritten_questions": [
+        "According to NICE, which weight-associated health issues might qualify a person with a lower obese BMI for semaglutide?",
+        "What weight-related medical conditions does NICE identify that might allow someone with a lower obese BMI range to be eligible for semaglutide treatment?",
+        "Which weight-related health conditions does NICE mention that could make someone with a lower obese BMI eligible for semaglutide?",
+        "What are the weight-related health problems listed by NICE that could enable someone in the lower obese BMI category to receive semaglutide?",
+        "According to NICE guidelines, which weight-related health issues could make a person with a lower obese BMI range suitable for semaglutide therapy?"
+      ],
+      "timestamp": "2025-07-31T19:08:26.462290",
+      "model_used": "gpt-4o"
+    }
+  ]
+}
