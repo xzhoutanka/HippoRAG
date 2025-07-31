@@ -20,7 +20,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 class FlexOlmoInteractor:
     """FlexOlmo简单交互式问答器"""
     
-    def __init__(self, model_path: str, max_length: int = 200, temperature: float = 0.7):
+    def __init__(self, model_path: str, max_length: int = 200, temperature: float = 0.1):
         """
         初始化交互器
         
@@ -115,19 +115,16 @@ class FlexOlmoInteractor:
             if self.device == "cuda":
                 inputs = {k: v.cuda() for k, v in inputs.items()}
             
-            # 生成回答
+            # 生成回答 - 与eval_FlexOlmo.py保持一致的参数
             with torch.no_grad():
                 outputs = self.model.generate(
                     **inputs,
                     max_length=inputs['input_ids'].shape[1] + self.max_length,
-                    temperature=self.temperature,
+                    temperature=self.temperature,  # 默认0.1，与评测脚本一致
                     do_sample=True,
                     pad_token_id=self.tokenizer.eos_token_id,
                     eos_token_id=self.tokenizer.eos_token_id,
-                    num_return_sequences=1,
-                    repetition_penalty=1.1,
-                    top_k=50,
-                    top_p=0.9
+                    num_return_sequences=1
                 )
             
             # 解码生成的文本
@@ -231,8 +228,8 @@ def main():
     parser.add_argument(
         "--temperature",
         type=float,
-        default=0.7,
-        help="生成温度 (默认: 0.7)"
+        default=0.1,
+        help="生成温度 (默认: 0.1，与评测脚本一致)"
     )
     
     args = parser.parse_args()
