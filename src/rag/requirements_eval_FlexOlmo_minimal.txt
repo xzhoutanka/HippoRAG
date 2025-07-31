@@ -1,0 +1,9 @@
+# FlexOlmo评测脚本最小依赖包
+# 仅包含运行 eval_FlexOlmo.py 的最基本依赖
+
+torch>=2.0.0
+transformers>=4.35.0
+datasets>=2.0.0
+huggingface_hub>=0.16.0
+safetensors>=0.3.0
+accelerate>=0.21.0
