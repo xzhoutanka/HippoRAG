@@ -180,11 +180,18 @@ class FlexOlmoEvaluator:
             # 解码生成的文本
             generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
             
-            # 提取答案部分（去除问题部分）
-            if "Answer:" in generated_text:
+            # 提取答案部分 - 改进逻辑
+            if "**Answer**:" in generated_text:
+                answer = generated_text.split("**Answer**:")[-1].strip()
+            elif "Answer:" in generated_text:
                 answer = generated_text.split("Answer:")[-1].strip()
             else:
-                answer = generated_text[len(prompt):].strip()
+                # 如果没有找到答案标记，尝试提取prompt之后的内容
+                prompt_end = generated_text.find(prompt.strip())
+                if prompt_end != -1:
+                    answer = generated_text[prompt_end + len(prompt.strip()):].strip()
+                else:
+                    answer = generated_text.strip()
             
             # 清理答案文本
             answer = self._clean_answer(answer)
@@ -199,6 +206,12 @@ class FlexOlmoEvaluator:
         """清理生成的答案文本"""
         # 移除多余的空白字符
         answer = answer.strip()
+        
+        # 如果答案以"**Question**:"开头，说明模型在重复生成问题格式，截断它
+        if answer.startswith("**Question**:"):
+            answer = answer.split("**Question**:")[0].strip()
+        if answer.startswith("Question:"):
+            answer = answer.split("Question:")[0].strip()
         
         # 移除可能的重复内容
         lines = answer.split('\n')
@@ -215,6 +228,10 @@ class FlexOlmoEvaluator:
         # 限制答案长度
         if len(answer) > 500:
             answer = answer[:500].strip()
+        
+        # 如果答案为空或只包含无意义内容，返回空字符串（eval脚本中用空字符串表示无答案）
+        if not answer or len(answer.strip()) < 3:
+            answer = ""
         
         return answer
     

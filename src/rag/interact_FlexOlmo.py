@@ -20,7 +20,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 class FlexOlmoInteractor:
     """FlexOlmo简单交互式问答器"""
     
-    def __init__(self, model_path: str, max_length: int = 200, temperature: float = 0.1):
+    def __init__(self, model_path: str, max_length: int = 500, temperature: float = 0.1):
         """
         初始化交互器
         
@@ -94,13 +94,12 @@ class FlexOlmoInteractor:
             if torch.cuda.is_available():
                 torch.cuda.manual_seed(42)
             
-            # 构建提示词 - 参考eval_FlexOlmo.py的prompt格式
+            # 构建提示词 - 保持简短格式
             prompt = f"""You are an expert news analyst tasked with answering questions based on factual knowledge from a news-related dataset. Your goal is to provide accurate, concise, and relevant answers to questions about news events, people, or topics.
             
 **Question**: {question}
 
-**Answer**:
-"""
+**Answer**:"""
             
             # 编码输入 - 与eval_FlexOlmo.py保持一致
             inputs = self.tokenizer(
@@ -130,16 +129,30 @@ class FlexOlmoInteractor:
             # 解码生成的文本
             generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
             
-            # 提取回答部分
+            # 调试信息：显示生成的完整文本（前500个字符）
+            if len(generated_text) > 500:
+                debug_text = generated_text[:500] + "..."
+            else:
+                debug_text = generated_text
+            print(f"[调试] 生成的完整文本: {debug_text}")
+            
+            # 提取回答部分 - 改进逻辑
             if "**Answer**:" in generated_text:
                 answer = generated_text.split("**Answer**:")[-1].strip()
             elif "Answer:" in generated_text:
                 answer = generated_text.split("Answer:")[-1].strip()
             else:
-                answer = generated_text[len(prompt):].strip()
+                # 如果没有找到答案标记，尝试提取prompt之后的内容
+                prompt_end = generated_text.find(prompt.strip())
+                if prompt_end != -1:
+                    answer = generated_text[prompt_end + len(prompt.strip()):].strip()
+                else:
+                    answer = generated_text.strip()
             
             # 清理答案文本
             answer = self._clean_answer(answer)
+            
+            print(f"[调试] 提取的答案: {answer}")
             
             return answer
             
@@ -150,6 +163,12 @@ class FlexOlmoInteractor:
         """清理生成的答案文本 - 与eval_FlexOlmo.py完全一致"""
         # 移除多余的空白字符
         answer = answer.strip()
+        
+        # 如果答案以"**Question**:"开头，说明模型在重复生成问题格式，截断它
+        if answer.startswith("**Question**:"):
+            answer = answer.split("**Question**:")[0].strip()
+        if answer.startswith("Question:"):
+            answer = answer.split("Question:")[0].strip()
         
         # 移除可能的重复内容
         lines = answer.split('\n')
@@ -166,6 +185,10 @@ class FlexOlmoInteractor:
         # 限制答案长度
         if len(answer) > 500:
             answer = answer[:500].strip()
+        
+        # 如果答案为空或只包含无意义内容，返回默认消息
+        if not answer or len(answer.strip()) < 3:
+            answer = "I don't have sufficient information to answer this question accurately."
         
         return answer
     
