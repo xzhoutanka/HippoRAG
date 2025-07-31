@@ -136,11 +136,28 @@ class FlexOlmoInteractor:
                 debug_text = generated_text
             print(f"[调试] 生成的完整文本: {debug_text}")
             
-            # 提取回答部分 - 改进逻辑
+            # 提取回答部分 - 修复逻辑，提取第一个答案
             if "**Answer**:" in generated_text:
-                answer = generated_text.split("**Answer**:")[-1].strip()
+                # 找到第一个 **Answer**: 的位置
+                answer_start = generated_text.find("**Answer**:") + len("**Answer**:")
+                answer_text = generated_text[answer_start:].strip()
+                
+                # 如果后面还有 **Question**:，截取到那里
+                if "**Question**:" in answer_text:
+                    answer = answer_text.split("**Question**:")[0].strip()
+                else:
+                    answer = answer_text.strip()
+                    
             elif "Answer:" in generated_text:
-                answer = generated_text.split("Answer:")[-1].strip()
+                # 找到第一个 Answer: 的位置
+                answer_start = generated_text.find("Answer:") + len("Answer:")
+                answer_text = generated_text[answer_start:].strip()
+                
+                # 如果后面还有 Question:，截取到那里
+                if "Question:" in answer_text:
+                    answer = answer_text.split("Question:")[0].strip()
+                else:
+                    answer = answer_text.strip()
             else:
                 # 如果没有找到答案标记，尝试提取prompt之后的内容
                 prompt_end = generated_text.find(prompt.strip())
