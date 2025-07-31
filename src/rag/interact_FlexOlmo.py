@@ -89,6 +89,11 @@ class FlexOlmoInteractor:
             生成的回答
         """
         try:
+            # 设置随机种子以确保结果一致性
+            torch.manual_seed(42)
+            if torch.cuda.is_available():
+                torch.cuda.manual_seed(42)
+            
             # 构建提示词 - 参考eval_FlexOlmo.py的prompt格式
             prompt = f"""You are an expert news analyst tasked with answering questions based on factual knowledge from a news-related dataset. Your goal is to provide accurate, concise, and relevant answers to questions about news events, people, or topics. Follow these guidelines:
 
@@ -102,13 +107,13 @@ class FlexOlmoInteractor:
 **Answer**:
 """
             
-            # 编码输入
+            # 编码输入 - 与eval_FlexOlmo.py保持一致
             inputs = self.tokenizer(
                 prompt, 
                 return_tensors="pt", 
                 padding=True, 
                 truncation=True,
-                max_length=1024
+                max_length=512
             )
             
             # 移动到正确设备
@@ -147,31 +152,25 @@ class FlexOlmoInteractor:
             return f"抱歉，生成回答时出现错误: {str(e)}"
     
     def _clean_answer(self, answer: str) -> str:
-        """清理生成的答案文本"""
+        """清理生成的答案文本 - 与eval_FlexOlmo.py完全一致"""
         # 移除多余的空白字符
         answer = answer.strip()
         
-        # 如果有多行，只取第一行
+        # 移除可能的重复内容
         lines = answer.split('\n')
-        if lines:
-            answer = lines[0].strip()
+        cleaned_lines = []
+        for line in lines:
+            line = line.strip()
+            if line and line not in cleaned_lines:
+                cleaned_lines.append(line)
+        
+        # 如果有多行，只取第一行作为答案
+        if cleaned_lines:
+            answer = cleaned_lines[0]
         
         # 限制答案长度
         if len(answer) > 500:
-            # 在句号处截断
-            sentences = answer.split('.')
-            truncated = []
-            current_length = 0
-            for sentence in sentences:
-                if current_length + len(sentence) > 450:
-                    break
-                truncated.append(sentence)
-                current_length += len(sentence)
-            
-            if truncated:
-                answer = '.'.join(truncated) + '.'
-            else:
-                answer = answer[:450] + "..."
+            answer = answer[:500].strip()
         
         return answer
     

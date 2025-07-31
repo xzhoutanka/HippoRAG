@@ -73,3 +73,40 @@ FlexOlmo交互式问答
 ```bash
 python src/rag/interact_FlexOlmo.py /mnt/tanka/models/FlexOlmo --temperature 0.7
 ```
+
+## 🔧 与eval_FlexOlmo.py的一致性优化
+
+已进行以下优化确保两个脚本产生一致的回答：
+
+### ✅ 完全一致的参数设置
+- **温度**: `0.1` (与评测脚本相同)
+- **输入长度**: `max_length=512` (与评测脚本相同)
+- **生成参数**: 移除额外约束，使用相同的简化参数
+- **随机种子**: 固定为`42`，确保结果可重现
+
+### ✅ 相同的处理逻辑
+- **Prompt格式**: 完全相同的expert news analyst prompt
+- **答案清理**: 使用相同的`_clean_answer`方法
+- **答案提取**: 相同的`**Answer**:`分割逻辑
+
+## 🧪 测试脚本一致性
+
+使用提供的测试脚本验证两个脚本输出的一致性：
+
+```bash
+# 对比测试
+python src/rag/test_compare_scripts.py /mnt/tanka/models/FlexOlmo "什么是人工智能？"
+
+# 输出示例:
+# 🧪 测试问题: 什么是人工智能？
+# ============================================================
+# 📊 eval_FlexOlmo.py 回答:
+# 「人工智能是计算机科学的一个分支...」
+# 
+# 💬 interact_FlexOlmo.py 回答:
+# 「人工智能是计算机科学的一个分支...」
+# 
+# 🔍 对比分析:
+#   ✅ 回答完全一致
+#   📈 关键词重叠率: 95.23%
+```
