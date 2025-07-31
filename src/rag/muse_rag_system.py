@@ -117,6 +117,9 @@ class MUSERAGSystem:
             logger.info("文档索引建立完成")
         except Exception as e:
             logger.error(f"建立索引失败: {e}")
+            logger.error(f"错误类型: {type(e).__name__}")
+            import traceback
+            logger.error(f"详细错误: {traceback.format_exc()}")
             # 尝试使用简化的索引方式
             logger.info("尝试使用简化的索引方式...")
             try:
@@ -129,7 +132,10 @@ class MUSERAGSystem:
                 logger.info("分批索引建立完成")
             except Exception as e2:
                 logger.error(f"分批索引也失败: {e2}")
-                raise
+                logger.error(f"错误类型: {type(e2).__name__}")
+                import traceback
+                logger.error(f"详细错误: {traceback.format_exc()}")
+                raise RuntimeError(f"无法建立文档索引: {e2}")
     
     def query(self, question: str, top_k: Optional[int] = None) -> Dict[str, Any]:
         """执行查询"""
