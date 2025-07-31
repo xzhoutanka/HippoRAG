@@ -144,7 +144,18 @@ class FlexOlmoEvaluator:
         """
         try:
             # 构建提示词 - 由于FlexOlmo已经包含News数据，直接回答问题
-            prompt = f"Question: {question}\nAnswer:"
+            #prompt = f"Question: {question}\nAnswer:"
+            prompt = f"""You are an expert news analyst tasked with answering questions based on factual knowledge from a news-related dataset. Your goal is to provide accurate, concise, and relevant answers to questions about news events, people, or topics. Follow these guidelines:
+
+1. Answer only based on the factual knowledge you have been trained on.
+2. If you are unsure or lack specific information, respond with "I don't have sufficient information to answer this question accurately."
+3. Provide your answer in a clear, structured format: start with a direct response, followed by a brief explanation if necessary.
+4. Avoid speculation, irrelevant details, or overly verbose responses.
+
+**Question**: {question}
+
+**Answer**:
+"""
             
             # 编码输入
             inputs = self.tokenizer(
