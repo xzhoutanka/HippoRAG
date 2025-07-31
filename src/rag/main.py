@@ -101,7 +101,12 @@ def main():
                                'gemini-flash-2.5', 'gemini-pro-2.5'],
                        help='LLM模型名称')
     parser.add_argument('--embedding-model', type=str, default='nvidia/NV-Embed-v2',
-                       help='Embedding模型名称')
+                       choices=['nvidia/NV-Embed-v2',
+                               'GritLM/GritLM-7B',
+                               'facebook/contriever',
+                               'text-embedding-ada-002',
+                               'cohere/embed-multilingual-v3.0'],
+                       help='Embedding模型名称，支持NV-Embed-v2、GritLM、Contriever、OpenAI和Cohere的embedding模型')
     parser.add_argument('--temperature', type=float, default=0.0,
                        help='LLM温度参数')
     parser.add_argument('--max-tokens', type=int, default=2048,

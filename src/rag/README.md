@@ -27,6 +27,15 @@
 - `gemini-flash-2.5`
 - `gemini-pro-2.5`
 
+### Embedding模型
+- `nvidia/NV-Embed-v2` (默认模型)
+- `GritLM/GritLM-7B` 或其他包含"GritLM"的模型
+- `facebook/contriever` 或其他包含"contriever"的模型
+- `text-embedding-ada-002` 或其他OpenAI的text-embedding模型
+- `cohere/embed-multilingual-v3.0` 或其他Cohere的embedding模型
+
+注意：使用OpenAI或Cohere的embedding模型时需要相应的API密钥。
+
 ## 环境准备
 
 ### 1. 激活conda环境
