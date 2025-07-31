@@ -221,7 +221,7 @@ def main():
         print("如遇到问题，请参考上述错误信息进行修复")
     else:
         print("❌ 多项测试失败，请先修复环境配置")
-        print("参考 FlexOlmo_Evaluation_Guide.md 获取详细说明")
+        print("参考 README_FlexOlmo_Evaluation.md 获取详细说明")
 
 if __name__ == "__main__":
     main()
