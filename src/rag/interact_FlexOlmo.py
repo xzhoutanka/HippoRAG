@@ -99,9 +99,6 @@ class FlexOlmoInteractor:
             # 构建提示词
             prompt = get_qa_prompt(question)
             
-            print(f"[调试] Prompt长度: {len(prompt)} 字符")
-            print(f"[调试] Prompt结尾: ...{prompt[-200:]}")
-            
             # 编码输入 - 显著增加max_length以确保完整prompt不被截断
             inputs = self.tokenizer(
                 prompt, 
@@ -111,7 +108,9 @@ class FlexOlmoInteractor:
                 max_length=4096  # 进一步增加到4096
             )
             
-            print(f"[调试] Tokenizer输入长度: {inputs['input_ids'].shape[1]} tokens")
+            # 打印完整输入token
+            input_text = self.tokenizer.decode(inputs['input_ids'][0], skip_special_tokens=True)
+            print(f"[调试] 模型输入: {input_text}")
             
             # 移动到正确设备
             if self.device == "cuda":
@@ -120,10 +119,6 @@ class FlexOlmoInteractor:
             # 生成回答 - 与eval_FlexOlmo.py保持一致的参数
             input_length = inputs['input_ids'].shape[1]
             total_max_length = input_length + self.max_length
-            
-            print(f"[调试] 输入长度: {input_length} tokens")
-            print(f"[调试] 生成长度: {self.max_length} tokens") 
-            print(f"[调试] 总最大长度: {total_max_length} tokens")
             
             with torch.no_grad():
                 outputs = self.model.generate(
@@ -139,36 +134,8 @@ class FlexOlmoInteractor:
             # 解码生成的文本
             generated_text = self.tokenizer.decode(outputs[0], skip_special_tokens=True)
             
-            # 调试信息：显示生成的完整文本
-            print(f"[调试] 生成文本长度: {len(generated_text)} 字符")
-            print(f"[调试] 输出tokens长度: {outputs[0].shape[0]} tokens")
-            
-            # 检查prompt是否完整包含在生成文本中
-            prompt_in_generated = prompt.strip() in generated_text
-            print(f"[调试] Prompt是否完整包含: {'✅' if prompt_in_generated else '❌'}")
-            
-            # 显示完整文本，但如果太长则分段显示
-            if len(generated_text) > 1500:
-                print(f"[调试] 生成文本开头 (前800字符): {generated_text[:800]}...")
-                print(f"[调试] 生成文本结尾 (后500字符): ...{generated_text[-500:]}")
-            else:
-                print(f"[调试] 生成的完整文本: {generated_text}")
-                
-            # 检查目标问题是否在生成文本中
-            target_question = question[:50] + "..." if len(question) > 50 else question
-            if question in generated_text:
-                print(f"[调试] ✅ 目标问题已包含在生成文本中: {target_question}")
-            else:
-                print(f"[调试] ❌ 目标问题未在生成文本中找到: {target_question}")
-                
-            # 如果prompt不完整，显示差异
-            if not prompt_in_generated:
-                print(f"[调试] ⚠️  Prompt被截断，查找最后出现的位置...")
-                # 找到生成文本和prompt的分歧点
-                for i in range(min(len(prompt), len(generated_text)), 0, -50):
-                    if prompt[:i] in generated_text:
-                        print(f"[调试] Prompt包含到位置 {i}: {prompt[max(0,i-50):i+50]}")
-                        break
+            # 打印完整输出token
+            print(f"[调试] 模型输出: {generated_text}")
             
             # 提取回答部分 - 适应新的few-shot格式
             # 新格式中，我们需要找到最后一个"Answer:"（即目标问题的答案）
@@ -181,45 +148,27 @@ class FlexOlmoInteractor:
                 answer_positions.append(pos)
                 start_pos = pos + 1
             
-            print(f"[调试] 找到 {len(answer_positions)} 个 'Answer:' 标记")
-            
             if answer_positions:
-                # 显示所有Answer位置的上下文
-                for i, pos in enumerate(answer_positions):
-                    context_start = max(0, pos - 50)
-                    context_end = min(len(generated_text), pos + 100)
-                    context = generated_text[context_start:context_end]
-                    print(f"[调试] Answer {i+1} 上下文: ...{context}...")
-                
                 # 取最后一个"Answer:"位置（目标问题的答案）
                 last_answer_pos = answer_positions[-1]
                 answer_start = last_answer_pos + len("Answer:")
                 answer_text = generated_text[answer_start:].strip()
                 
-                print(f"[调试] 最后一个Answer后的文本: {answer_text[:200]}...")
-                
                 # 如果后面还有"Question:"，截取到那里
                 if "Question:" in answer_text:
                     answer = answer_text.split("Question:")[0].strip()
-                    print(f"[调试] 截取到下一个Question前: {answer}")
                 else:
                     answer = answer_text.strip()
-                    print(f"[调试] 取完整Answer文本: {answer}")
             else:
-                print(f"[调试] 未找到Answer标记，尝试其他方法")
                 # 如果没有找到答案标记，尝试提取prompt之后的内容
                 prompt_end = generated_text.find(prompt.strip())
                 if prompt_end != -1:
                     answer = generated_text[prompt_end + len(prompt.strip()):].strip()
-                    print(f"[调试] 提取prompt后内容: {answer}")
                 else:
                     answer = generated_text.strip()
-                    print(f"[调试] 使用整个生成文本: {answer}")
             
             # 清理答案文本
             answer = self._clean_answer(answer)
-            
-            print(f"[调试] 提取的答案: {answer}")
             
             return answer
             
