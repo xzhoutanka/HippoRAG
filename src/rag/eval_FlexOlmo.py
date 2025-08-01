@@ -132,7 +132,7 @@ class FlexOlmoEvaluator:
         except Exception as e:
             logger.warning(f"读取模型配置失败: {e}")
     
-    def generate_answer(self, question: str, max_length: int = 800) -> str:
+    def generate_answer(self, question: str, max_length: int = 1200) -> str:
         """
         使用FlexOlmo模型生成问题答案
         
@@ -147,13 +147,13 @@ class FlexOlmoEvaluator:
             # 构建提示词
             prompt = get_qa_prompt(question)
             
-            # 编码输入 - 因为新prompt包含5个示例，需要更大的max_length
+            # 编码输入 - 显著增加max_length以确保完整prompt不被截断
             inputs = self.tokenizer(
                 prompt, 
                 return_tensors="pt", 
                 padding=True, 
                 truncation=True,
-                max_length=2048  # 从1024增加到2048以容纳few-shot示例
+                max_length=4096  # 进一步增加到4096
             )
             
             # 移动到正确设备

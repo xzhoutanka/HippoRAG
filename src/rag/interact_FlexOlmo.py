@@ -22,7 +22,7 @@ from prompts import get_qa_prompt
 class FlexOlmoInteractor:
     """FlexOlmo简单交互式问答器"""
     
-    def __init__(self, model_path: str, max_length: int = 800, temperature: float = 0.1):
+    def __init__(self, model_path: str, max_length: int = 1200, temperature: float = 0.1):
         """
         初始化交互器
         
@@ -99,14 +99,19 @@ class FlexOlmoInteractor:
             # 构建提示词
             prompt = get_qa_prompt(question)
             
-            # 编码输入 - 因为新prompt包含5个示例，需要更大的max_length
+            print(f"[调试] Prompt长度: {len(prompt)} 字符")
+            print(f"[调试] Prompt结尾: ...{prompt[-200:]}")
+            
+            # 编码输入 - 显著增加max_length以确保完整prompt不被截断
             inputs = self.tokenizer(
                 prompt, 
                 return_tensors="pt", 
                 padding=True, 
                 truncation=True,
-                max_length=2048  # 从1024增加到2048以容纳few-shot示例
+                max_length=4096  # 进一步增加到4096
             )
+            
+            print(f"[调试] Tokenizer输入长度: {inputs['input_ids'].shape[1]} tokens")
             
             # 移动到正确设备
             if self.device == "cuda":
@@ -136,6 +141,11 @@ class FlexOlmoInteractor:
             
             # 调试信息：显示生成的完整文本
             print(f"[调试] 生成文本长度: {len(generated_text)} 字符")
+            print(f"[调试] 输出tokens长度: {outputs[0].shape[0]} tokens")
+            
+            # 检查prompt是否完整包含在生成文本中
+            prompt_in_generated = prompt.strip() in generated_text
+            print(f"[调试] Prompt是否完整包含: {'✅' if prompt_in_generated else '❌'}")
             
             # 显示完整文本，但如果太长则分段显示
             if len(generated_text) > 1500:
@@ -150,6 +160,15 @@ class FlexOlmoInteractor:
                 print(f"[调试] ✅ 目标问题已包含在生成文本中: {target_question}")
             else:
                 print(f"[调试] ❌ 目标问题未在生成文本中找到: {target_question}")
+                
+            # 如果prompt不完整，显示差异
+            if not prompt_in_generated:
+                print(f"[调试] ⚠️  Prompt被截断，查找最后出现的位置...")
+                # 找到生成文本和prompt的分歧点
+                for i in range(min(len(prompt), len(generated_text)), 0, -50):
+                    if prompt[:i] in generated_text:
+                        print(f"[调试] Prompt包含到位置 {i}: {prompt[max(0,i-50):i+50]}")
+                        break
             
             # 提取回答部分 - 适应新的few-shot格式
             # 新格式中，我们需要找到最后一个"Answer:"（即目标问题的答案）
