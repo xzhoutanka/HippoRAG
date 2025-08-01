@@ -17,6 +17,8 @@ import sys
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
+from prompts import get_qa_prompt
+
 class FlexOlmoInteractor:
     """FlexOlmo简单交互式问答器"""
     
@@ -94,12 +96,8 @@ class FlexOlmoInteractor:
             if torch.cuda.is_available():
                 torch.cuda.manual_seed(42)
             
-            # 构建提示词 - 保持简短格式
-            prompt = f"""You are an expert news analyst tasked with answering questions based on factual knowledge from a news-related dataset. Your goal is to provide accurate, concise, and relevant answers to questions about news events, people, or topics.
-            
-**Question**: {question}
-
-**Answer**:"""
+            # 构建提示词
+            prompt = get_qa_prompt(question)
             
             # 编码输入 - 与eval_FlexOlmo.py保持一致
             inputs = self.tokenizer(

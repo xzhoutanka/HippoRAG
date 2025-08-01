@@ -20,8 +20,9 @@ from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-# 导入项目中的数据加载器
+# 导入项目中的数据加载器和提示词模板
 from data_loader import MUSENewsDataLoader, Question
+from prompts import get_qa_prompt
 
 # 设置日志
 logging.basicConfig(
@@ -143,14 +144,8 @@ class FlexOlmoEvaluator:
             生成的答案文本
         """
         try:
-            # 构建提示词 - 由于FlexOlmo已经包含News数据，直接回答问题
-            #prompt = f"Question: {question}\nAnswer:"
-            prompt = f"""You are an expert news analyst tasked with answering questions based on factual knowledge from a news-related dataset. Your goal is to provide accurate, concise, and relevant answers to questions about news events, people, or topics. Follow these guidelines:
-
-**Question**: {question}
-
-**Answer**:
-"""
+            # 构建提示词
+            prompt = get_qa_prompt(question)
             
             # 编码输入
             inputs = self.tokenizer(
