@@ -99,13 +99,13 @@ class FlexOlmoInteractor:
             # 构建提示词
             prompt = get_qa_prompt(question)
             
-            # 编码输入 - 与eval_FlexOlmo.py保持一致
+            # 编码输入 - 因为新prompt包含5个示例，需要更大的max_length
             inputs = self.tokenizer(
                 prompt, 
                 return_tensors="pt", 
                 padding=True, 
                 truncation=True,
-                max_length=1024
+                max_length=2048  # 从1024增加到2048以容纳few-shot示例
             )
             
             # 移动到正确设备
@@ -134,24 +134,24 @@ class FlexOlmoInteractor:
                 debug_text = generated_text
             print(f"[调试] 生成的完整文本: {debug_text}")
             
-            # 提取回答部分 - 修复逻辑，提取第一个答案
-            if "**Answer**:" in generated_text:
-                # 找到第一个 **Answer**: 的位置
-                answer_start = generated_text.find("**Answer**:") + len("**Answer**:")
+            # 提取回答部分 - 适应新的few-shot格式
+            # 新格式中，我们需要找到最后一个"Answer:"（即目标问题的答案）
+            answer_positions = []
+            start_pos = 0
+            while True:
+                pos = generated_text.find("Answer:", start_pos)
+                if pos == -1:
+                    break
+                answer_positions.append(pos)
+                start_pos = pos + 1
+            
+            if answer_positions:
+                # 取最后一个"Answer:"位置（目标问题的答案）
+                last_answer_pos = answer_positions[-1]
+                answer_start = last_answer_pos + len("Answer:")
                 answer_text = generated_text[answer_start:].strip()
                 
-                # 如果后面还有 **Question**:，截取到那里
-                if "**Question**:" in answer_text:
-                    answer = answer_text.split("**Question**:")[0].strip()
-                else:
-                    answer = answer_text.strip()
-                    
-            elif "Answer:" in generated_text:
-                # 找到第一个 Answer: 的位置
-                answer_start = generated_text.find("Answer:") + len("Answer:")
-                answer_text = generated_text[answer_start:].strip()
-                
-                # 如果后面还有 Question:，截取到那里
+                # 如果后面还有"Question:"，截取到那里
                 if "Question:" in answer_text:
                     answer = answer_text.split("Question:")[0].strip()
                 else:
@@ -179,9 +179,7 @@ class FlexOlmoInteractor:
         # 移除多余的空白字符
         answer = answer.strip()
         
-        # 如果答案以"**Question**:"开头，说明模型在重复生成问题格式，截断它
-        if answer.startswith("**Question**:"):
-            answer = answer.split("**Question**:")[0].strip()
+        # 如果答案以"Question:"开头，说明模型在重复生成问题格式，截断它
         if answer.startswith("Question:"):
             answer = answer.split("Question:")[0].strip()
         
