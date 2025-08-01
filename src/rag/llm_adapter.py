@@ -71,8 +71,8 @@ class LLMAdapter:
     def _get_google_model_name(self) -> str:
         """获取Google模型的实际名称"""
         google_model_mapping = {
-            'gemini-flash-2.5': 'gemini-2.0-flash-exp',
-            'gemini-pro-2.5': 'gemini-exp-1121'
+            'gemini-flash-2.5': 'gemini-2.5-flash',  # Gemini 2.5 Flash (正式版)
+            'gemini-pro-2.5': 'gemini-2.5-pro'       # Gemini 2.5 Pro (正式版)
         }
         return google_model_mapping.get(self.config.model_name, self.config.model_name)
     
@@ -91,8 +91,15 @@ class LLMAdapter:
     
     def _generate_openai(self, messages: List[Dict[str, str]], **kwargs) -> str:
         """OpenAI API调用"""
+        # OpenAI模型名称映射
+        openai_model_mapping = {
+            'gpt-4.5': 'gpt-4.5-preview',  # GPT-4.5正式版API名称
+        }
+        
+        model_name = openai_model_mapping.get(self.config.model_name, self.config.model_name)
+        
         response = self.client.chat.completions.create(
-            model=self.config.model_name,
+            model=model_name,
             messages=messages,
             temperature=kwargs.get('temperature', self.config.temperature),
             max_tokens=kwargs.get('max_tokens', self.config.max_tokens),
@@ -118,7 +125,7 @@ class LLMAdapter:
         # Claude模型名称映射
         claude_model_mapping = {
             'claude-3.5-sonnet': 'claude-3-5-sonnet-20241022',
-            'claude-4-sonnet': 'claude-3-5-sonnet-20241022'  # 使用最新的Claude 3.5
+            'claude-4-sonnet': 'claude-sonnet-4-20250514'  # Claude 4 Sonnet正式版
         }
         
         model_name = claude_model_mapping.get(self.config.model_name, self.config.model_name)
