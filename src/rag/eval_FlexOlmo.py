@@ -132,7 +132,7 @@ class FlexOlmoEvaluator:
         except Exception as e:
             logger.warning(f"读取模型配置失败: {e}")
     
-    def generate_answer(self, question: str, max_length: int = 500) -> str:
+    def generate_answer(self, question: str, max_length: int = 800) -> str:
         """
         使用FlexOlmo模型生成问题答案
         
